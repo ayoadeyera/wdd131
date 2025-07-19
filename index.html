@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Ayodeji Adeyera</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals assignment by Ayodeji Adeyera">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Ayodeji Adeyera. Assignment to demonstrate understanding of HTML and CSS.">
     <meta name="author" content="Ayodeji Solomon Adeyera">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +14,16 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <script src="getdates.js" defer></script>
-
 </head>
 
 <body>
-    <header class="header">
-        <h1>WDD 131: Dynamic Web Fundamentals - Ayodeji Adeyera</h1>
-        <p>checking it in.... Thank You</p>
-        <nav class="nav-bar">
+    <header>
+        <div>
+            <h1>WDD131:Dynamic Web Fundamentals - Ayodeji Solomon Adeyera </h1>
+        </div>
+        <nav>
             <ul class="navigation">
-                <li><a href="https://www.linkedin.com/in/ayodejiadeyera/">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/solomonadeyera/">LinkedIn</a></li>
                 <li><a href="https://byupw.instructure.com/">Canvas</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng">Scripture</a>
                 </li>
@@ -32,32 +32,46 @@
         </nav>
     </header>
     <main>
-        <section class="card">
-            <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odit quas laboriosam quae quia animi
-                aut aperiam voluptatibus fugiat sint!</p>
-            <img src="images/ayo.jpg" alt="Ayo Smiling">
-
+        <h2>About Me! </h2>
+        <section class="card1">
+            <img src="images/ayo.jpg" alt="Ayo Smiling" width="150">
+            <p> Hi there! I'm Solomon Adeyera, a software development major at Brigham Young University–Idaho.<br>
+            I'm currently enrolled in WDD 131: Dynamic Web Fundamentals, a course that’s already proving to be an exciting step in my journey as a developer. Through this class, I’m diving into responsive web design using HTML, CSS, and JavaScript, with a strong focus on usability, accessibility, and industry best practices in front-end development.<br>
+            I'm eager to apply the skills I gain here to real-world projects and future internships. Even more, I’m looking forward to connecting with fellow students and professionals—learning from their experiences and growing together in this ever-evolving field.<br>
+            Let’s build something great!
+            </p>
         </section>
+        <section class="card2">
+            <h1>Abuja, Nigeria</h1>
+            
+            <img src="images/flag.jpg" alt="small color" width="120">
+            
+            <p>Abuja, the capital of Nigeria, sits proudly at the heart of the country.<br>
+            Designated as the capital in 1991 for its central location, Abuja was chosen to promote unity and accessibility for all Nigerians, regardless of region. The city is renowned for its striking modern architecture, including iconic landmarks like the Nigerian National Mosque and the National Christian Centre. <br>
 
-        <section class="card">
-            <h3>Topic Two</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odit quas laboriosam quae quia animi
-                aut aperiam voluptatibus fugiat sint!</p>
-            <img src="images/flag.jpg" alt="small color">
-
+            As a purpose-built city, Abuja blends government institutions, embassies, and international organizations with thoughtfully planned residential, commercial, and recreational zones. This balance makes it not only the political center of Nigeria but also a vibrant, diverse, and dynamic place to live, work, and explore.
+            </p>
         </section>
-
     </main>
-    <aside class="side-content">
-        <p>Aside Content</p>
-    </aside>
-    <footer>
-        <p>&copy;2024 Life Adventures | Ayodeji Solomon Adeyera</p>
-        <span id="currentyear"></span>
 
-        <p>Footer Content</p>
-        <p id="lastModified">Last Modification</p>
+    <div class="right-sidebar">
+        <h2>Web Dev Resources</h2>
+        <section class="card3">
+            <ul>
+                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Resources for developer</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">FreecodeCamp</a></li>
+                <li><a href="https://app.uxcel.com/lessons/basics-512/image-placeholder-4436"
+                        target="_blank">ImagePlaceholder</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>©<span id="current-year"></span>🌹 Ayodeji Solomon Adeyera 🌹| Osogbo, Nigeria </p>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 
