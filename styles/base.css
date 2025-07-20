@@ -132,6 +132,13 @@ main {
     margin: 0 20px 0 20px;
 }
 
+
+.card1 img, .card2 img {
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+
 .card2 h1 {
     color: var(--text-dark);
     font-weight: 600;
