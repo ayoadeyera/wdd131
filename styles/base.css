@@ -69,7 +69,16 @@ h3 {
     font-weight: 600;
         }
 
-
+#course-title {
+    text-align: right;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    max-width: 93.75rem;
+}
 /* =========================
    Header & Navigation
 ========================= */
