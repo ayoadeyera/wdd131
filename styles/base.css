@@ -79,6 +79,7 @@ h1, h2 {
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .navigation a:hover {
@@ -91,6 +92,7 @@ main {
     border: 5px solid var(--background-light);
     grid-column: 1 / 3;
     background-color: var(--text-light);
+    
 }
 
 .card1,
@@ -175,6 +177,18 @@ main, .right-sidebar {
     text-decoration: none;
     padding: 0.2rem;
 }
+
+
+.card3 a:hover {
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+
+.card1, .card2, .card3 {
+    border: 1px solid var(--muted-color);
+}
+
 
 footer {
     background: var(--primary-color);
