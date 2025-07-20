@@ -151,7 +151,6 @@ main {
 .card1 img,
 .card2 img {
     padding: 5px;
-    width: 15%;
     height: auto;
     border-radius: 0.5rem;
     object-fit: cover;
@@ -160,10 +159,12 @@ main {
 .card1 img {
     float: right;
     margin: 0 0 20px 20px;
+    width: 20%;
 }
 
 .card2 img {
     float: left;
+    width: 15%;
     margin: 0 20px 0 20px;
 }
 
@@ -195,11 +196,11 @@ main {
 }
 
 .card3 {
-    margin-top: 3rem;
+   
     padding: 1rem;
     background-color: var(--text-light);
     border-radius: 0.5rem;
-    width: 90%;
+    width: 86%;
     border: 1px solid var(--muted-color);
 }
 
