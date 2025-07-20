@@ -201,6 +201,7 @@ main {
     background-color: var(--text-light);
     border-radius: 0.5rem;
     width: 86%;
+    height: 85%;
     border: 1px solid var(--muted-color);
 }
 
