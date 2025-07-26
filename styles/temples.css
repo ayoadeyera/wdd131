@@ -1,3 +1,20 @@
+/* =========================
+   Color Palette
+========================= */
+:root {
+    --primary-color: #003049;       /* Rich Navy Blue */
+    --secondary-color: #669BBC;     /* Soft Sky Blue */
+    --accent-color: #FDF0D5;        /* Creamy Beige */
+    --highlight-color: #F77F00;     /* Warm Orange */
+    --muted-color: #C9D6DF;         /* Light Slate */
+    --text-dark: #1B1B1E;           /* Deep Charcoal */
+    --text-light: #FFFFFF;          /* White */
+    --background-light: #F5F5F5;    /* Light Gray */
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +23,11 @@
 
 body {
     font-family: "Robotic", sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--);
 }
 
 nav {
-    background-color: #3C0A64;
+    background-color: var(--primary-color);
 }
 
 nav ul {
@@ -21,7 +38,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: #fff;
+    color: var(--background-light);
     text-align: center;
     padding: 1em;
     text-decoration: none;

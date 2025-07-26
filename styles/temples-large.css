@@ -1,3 +1,18 @@
+/* =========================
+   Color Palette
+========================= */
+:root {
+    --primary-color: #003049;       /* Rich Navy Blue */
+    --secondary-color: #669BBC;     /* Soft Sky Blue */
+    --accent-color: #FDF0D5;        /* Creamy Beige */
+    --highlight-color: #F77F00;     /* Warm Orange */
+    --muted-color: #C9D6DF;         /* Light Slate */
+    --text-dark: #1B1B1E;           /* Deep Charcoal */
+    --text-light: #FFFFFF;          /* White */
+    --background-light: #F5F5F5;    /* Light Gray */
+}
+
+
 /* Responsive adjustments */
 /* Larger Views ******************************/
 @media screen and (min-width: 700px) {
@@ -11,7 +26,7 @@
         margin-left: 1rem;
         margin-top: 1rem;
         float: left;
-        color: #fff;   
+        color: var(--text-light);   
     }
     
     nav {
