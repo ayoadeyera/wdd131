@@ -1,0 +1,60 @@
+/* Responsive adjustments */
+/* Larger Views ******************************/
+@media screen and (min-width: 700px) {
+    main, .gallery {
+        margin-top: 1rem;
+    }
+
+    h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        float: left;
+        color: #fff;   
+    }
+    
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    nav a {
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    #main-nav ul {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        gap: 1rem;
+        /* padding: 1rem; */
+    }
+
+    .gallery h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color:black;   
+    }
+
+}
