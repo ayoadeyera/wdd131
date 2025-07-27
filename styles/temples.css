@@ -82,7 +82,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin-top: 0.8rem;
@@ -108,6 +108,11 @@ nav a:hover {
     border-radius: 0.5rem;
 }
 
+nav.open ul {
+  display: flex;
+}
+
+
 .active {
     color: var(--highlight-color);
     font-weight: 600;
@@ -116,14 +121,14 @@ nav a:hover {
 
 /* mobile ** small view navigation **/
 #menu {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     border: 0;
     background: none;
-    color: var(--accent-color);
+    color: var(--primary-color);
     /* color: rgb(18, 16, 16); */
     position: absolute;
-    top: 2rem;
+
     right: 1rem;
 }
 
