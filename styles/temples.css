@@ -181,11 +181,12 @@ main,
 
 /* Start with the Base styles for previous footer */
 footer {
-    background: #3C0A64;
+    background: var(--primary-color);
     padding: 1rem;
     text-align: center;
+    color: var(--text-light);
     margin-top: 2rem;
-    width: 100%;
+    grid-column: 1 / 4;
 }
 
 footer p {
@@ -193,8 +194,13 @@ footer p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.5px;
     font-size: 1rem;
-    color: #fff;
     font-weight: 400;
+}
+
+.modification {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
 }
 
 /* Hide nav by default on small screens */
