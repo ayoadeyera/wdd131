@@ -237,7 +237,7 @@ footer p {
 
     h1 {
         color: rgb(255, 251, 251);
-        background-color: #3C0A64;
+        background-color: var(--primary-color);
         /* background-color: #a7bce3; */
         position: absolute;
         width: 100%;
