@@ -56,7 +56,7 @@ h2 {
     font-size: 1.2rem;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
-    background: var(--muted-color);
+    background: var(--primary-color);
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     max-width: 93.75rem;
@@ -119,10 +119,10 @@ nav.open ul {
     text-decoration: underline;     
 }
 
-
+/* mobile ** small view navigation **/
 #menu {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
     border: 0;
     background: none;
@@ -141,7 +141,7 @@ nav.open ul {
     content: "❌";
 }
 
-
+/* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
     display: block;
 }

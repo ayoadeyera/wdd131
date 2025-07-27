@@ -12,59 +12,67 @@
     --background-light: #F5F5F5;    /* Light Gray */
 }
 
-
-/* Responsive adjustments */
-/* Larger Views ******************************/
+/* =========================
+   Responsive Styles for Larger Screens (min-width: 700px)
+========================= */
 @media screen and (min-width: 700px) {
+
+    /* Reset default spacing and set box-sizing */
     * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    
+
+    /* Add spacing above main content and gallery */
     main, .gallery {
         margin-top: 1rem;
     }
 
+    /* Style for main heading */
     h1 {
         text-align: center;
         color: var(--text-light);
         white-space: nowrap;
         margin-left: 25px;
         font-size: 2rem;
-    }    
+    }
 
+    /* Style for section headings */
     h2 {
-    text-align: center;
-    color: var(--text-light);
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: "Roboto", sans-serif;
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    max-width: 93.75rem;
+        text-align: center;
+        color: var(--text-light);
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: "Roboto", sans-serif;
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        max-width: 93.75rem;
     }
 
-
+    /* Style for subheadings */
     h3 {
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 1.2rem;
-    font-weight: 600;
+        text-align: center;
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        font-weight: 600;
     }
 
+    /* Header layout for larger screens */
     header {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
+    /* Navigation bar styling */
     nav {
         width: 100%;
         background-color: var(--primary-color);
     }
 
+    /* Horizontal navigation menu */
     nav ul {
         justify-content: flex-end;
         flex-direction: row;
@@ -72,16 +80,17 @@
         align-items: center;
     }
 
+    /* Navigation links grow to fill space */
     nav a {
         flex: 1 1 100%;
-        
     }
 
+    /* Hide hamburger menu on larger screens */
     #menu {
         display: none;
-        /* hide hamburger button */
     }
 
+    /* Override mobile nav styles for larger screens */
     #main-nav ul {
         display: flex !important;
         position: static;
@@ -90,6 +99,7 @@
         width: auto;
     }
 
+    /* Gallery layout with 3 columns */
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -97,13 +107,13 @@
         padding: 10px;
     }
 
+    /* Gallery heading styling */
     .gallery h2 {
         grid-column: 1 / -1;
         text-align: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 2rem;
-        color:black;   
+        color: black;
     }
-
 }
