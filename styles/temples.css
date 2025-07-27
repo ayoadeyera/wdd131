@@ -31,14 +31,42 @@ body {
 
 
 header {
+    font-weight: 100;
     background-color: var(--primary-color);
-    color: var(--text-light);
+    }
+
+h1, h2 {
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}    
+    
+h1 {
     text-align: center;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem 0.5rem 0 0;
+    max-width: 93.75rem;
 }
 
-h1 {
-    font-size: 2rem;
+h2 {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    background: var(--muted-color);
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    max-width: 93.75rem;
+}
 
+h3 {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* Navigation styles */
