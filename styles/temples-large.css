@@ -58,9 +58,8 @@
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        /* grid-template-rows: repeat(3, 1fr); */
         gap: 1rem;
-        /* padding: 1rem; */
+        padding: 10px;
     }
 
     .gallery h2 {

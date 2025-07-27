@@ -145,6 +145,15 @@ nav a:hover {
 
 /* The Main tag and Image stlying start from here*/
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 93.75rem;
+    margin: auto;
+}
+
 main,
 .gallery {
     margin-top: 1rem; 
@@ -159,19 +168,30 @@ main,
     /* Remove any bottom margin */
     border-radius: 5px;
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
-    overflow: hidden;
+    
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--muted-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(2, 2, 2, 0.1);
+    overflow: hidden;
+}
 .gallery figure img {
     width: 100%;
     height: auto;
     display: flex;
+    padding: 2px;
 
 }
 
 .gallery figure figcaption {
-    background-color: #eee;
-    color: #555;
+    /* background-color: #eee; */
+    color: var(--primary-color);
     padding: 0.8em;
     text-align: center;
     font-size: 0.9em;
@@ -203,54 +223,3 @@ footer p {
     color: var(--highlight-color);
 }
 
-/* Hide nav by default on small screens */
-@media (max-width: 700px) {
-    #main-nav ul {
-        display: none;
-        flex-direction: column;
-        background: #6a7994;
-        position: absolute;
-        top: 60px;
-        /* adjust as needed */
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    #main-nav.open ul {
-        display: flex;
-    }
-
-    #menu {
-        display: block;
-        /* background-color: #aae94c; */
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr;
-        /* Creates one column that takes up all available space */
-        gap: 1rem;
-        /* Sets a gap of 1rem between rows */
-
-    }
-
-    h1 {
-        color: rgb(255, 251, 251);
-        background-color: var(--primary-color);
-        /* background-color: #a7bce3; */
-        position: absolute;
-        width: 100%;
-        height: 4rem;
-    }
-
-    h2 {
-        display: grid;
-        text-align: center;
-        margin-top: 5rem;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        color: black; 
-    }
-
-}
