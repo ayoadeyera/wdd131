@@ -119,8 +119,9 @@ nav.open ul {
     text-decoration: underline;     
 }
 
-/* mobile ** small view navigation **/
+
 #menu {
+    display: block;
     font-size: 1.2rem;
     font-weight: 500;
     border: 0;
@@ -140,17 +141,11 @@ nav.open ul {
     content: "❌";
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
+
 .open a {
     display: block;
 }
 
-/* .active::before {
-    /* content: "📍"; */
-/* just a wayfinding symbol for the user 
-}  */
-
-/* The Main tag and Image stlying start from here*/
 
 .gallery {
     display: grid;
@@ -164,8 +159,7 @@ nav.open ul {
 main,
 .gallery {
     margin-top: 1rem; 
-    /* margin: 0rem;
-    padding: 0rem; */
+
 }
 
 .gallery figure {
