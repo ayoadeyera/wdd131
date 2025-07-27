@@ -12,9 +12,7 @@
     --background-light: #F5F5F5;    /* Light Gray */
 }
 
-
-
-
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +21,24 @@
 
 body {
     font-family: "Robotic", sans-serif;
-    background-color: var(--);
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 0 1rem;
 }
+
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 
 nav {
     background-color: var(--primary-color);
