@@ -1,11 +1,9 @@
 :root {
-    --header-footer-bg: #D21034;
-    /* Red from wireframe */
-    --accent-white: #3d784f;
-    /* Green border color */
-    --text-color: #333;
-    --white-text: #fff;
-    --section-bg: #efefef;
+    --header-footer-bg: #D21034; /* Red background */
+    --accent-white: #3d784f;     /* Green accent */
+    --text-color: #333;          /* Main text color */
+    --white-text: #fff;          /* White text */
+    --section-bg: #efefef;       /* Section background */
 }
 
 body {
@@ -13,30 +11,23 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    background-color: #e4e4e4;
-    /* Light grey background for the page */
+    background-color: #e4e4e4; /* Light grey background */
     color: var(--text-color);
     display: flex;
     justify-content: center;
     height: 60%;
-    /* min-height: 100vh; */
-    /* Ensure footer sticks to bottom if content is short */
+    /* min-height: 100vh; Optional: stick footer to bottom */
 }
 
 .page-container {
     width: 100%;
-    /* max-width: 800px; */
-    /* Max width for wider view */
     background-color: var(--section-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
-    /* Margin top/bottom for wider view */
-    /* overflow: hidden; */
-    /* For rounded corners/borders */
+    /* Optional: max-width, overflow, etc. */
 }
 
-/* Header and Footer */
-
+/* Header and Footer styles */
 .main-header,
 .main-footer {
     background-color: var(--header-footer-bg);
@@ -52,23 +43,21 @@ body {
     position: relative;
 }
 
-/* Green top/bottom borders on header/footer */
+/* Green border below header */
 .main-header::after {
     content: '';
     display: block;
     height: 2rem;
-    /* Border thickness */
     background-color: var(--accent-white);
     position: absolute;
     left: 0;
     right: 0;
 }
 
-/* Image Hero section, Data and Weather Sections */
+/* Hero image and stats sections */
 .hero-div {
     margin: 10px auto;
     position: relative;
-    /* If removed, what happens? */
 }
 
 .hero-div img {
@@ -77,16 +66,25 @@ body {
     object-fit: cover;
 }
 
-.stats-1 {
+.stats-1,
+.stats-2 {
     position: absolute;
-    bottom: 400px;
-    left: 15px;
     width: 20rem;
     background: radial-gradient(#eee, #e7fae7);
     border: 1px solid #000;
     padding: 0.65rem;
     box-shadow: 0 0 30px #111;
     opacity: 0.9;
+}
+
+.stats-1 {
+    bottom: 400px;
+    left: 15px;
+}
+
+.stats-2 {
+    bottom: 25px;
+    right: 15px;
 }
 
 .text-banner {
@@ -100,40 +98,25 @@ body {
     margin: 0.5rem;
 }
 
-.stats-2 {
-    position: absolute;
-    bottom: 25px;
-    right: 15px;
-    width: 20rem;
-    background: radial-gradient(#eee, #e7fae7);
-    border: 1px solid #000;
-    padding: 0.65rem;
-    box-shadow: 0 0 30px #111;
-    opacity: 0.9;
-}
-
 .weather-icon img {
     width: 50px;
-    /* Size of weather icon */
     height: auto;
     margin-bottom: 10px;
     float: right;
 }
 
-
-/* Footer specific styling */
+/* Footer text */
 .main-footer p {
     margin: 5px 0;
     font-size: 1.5rem;
     padding: 0 10px;
 }
 
-/* Responsive Design for Mobile View (smaller screens) */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .page-container {
         margin: 0;
         border-radius: 0;
-        /* Remove rounded corners on smaller screens */
     }
 
     .main-header h1 {
@@ -147,53 +130,38 @@ body {
     .stats-1,
     .stats-2 {
         position: static;
-        /* Remove absolute positioning */
         width: 100%;
-        /* Full width under the image */
         margin: 0 0 1rem 0;
-        /* Space below each section */
         box-shadow: none;
-        /* Optional: remove shadow for mobile */
         left: auto;
         right: auto;
         bottom: auto;
     }
-
 }
 
-/* Responsive Design for Wider View (similar to wireframe for >768px) */
+/* Desktop view adjustments */
 @media (min-width: 769px) {
     .page-container {
         border-radius: 8px;
-        /* Rounded corners for the entire card */
     }
 
-    /* Adjust main header and footer for green borders outside */
-    .main-header {
-        position: relative;
-        padding-top: 20px;
-        /* Make space for pseudo-element */
-    }
-
+    .main-header,
     .main-footer {
         position: relative;
+        padding-top: 20px;
         padding-bottom: 20px;
-        /* Make space for pseudo-element */
     }
 
-    /* Move the green borders to the main container for wider view */
     .page-container::before,
     .page-container::after {
         content: '';
         display: block;
         height: 5px;
-        /* Border thickness */
         background-color: var(--accent-green);
         position: absolute;
         left: 0;
         right: 0;
         z-index: 10;
-        /* Ensure it's on top */
     }
 
     .page-container::before {
@@ -204,11 +172,9 @@ body {
         bottom: 0;
     }
 
-    /* Adjust header h1 and footer p for the container border */
     .main-header h1,
     .main-footer p {
         position: relative;
-        /* So z-index works on header/footer content */
         z-index: 1;
     }
 }
