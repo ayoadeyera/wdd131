@@ -78,8 +78,9 @@ body {
 }
 
 .stats-1 {
-    bottom: 400px;
+    /* bottom: 400px; */
     left: 15px;
+    top: 50px;
 }
 
 .stats-2 {
