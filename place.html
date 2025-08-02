@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page - Solomon Adeyera</title>
+    <meta name="description"
+        content="This page talks about a place I have visited and wish to visit agian.">
+    <meta name="author" content="Solomon Adeyera">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="main-header">
+            <h1>MADAGASCAR</h1>
+        </header>
+
+        <main></main>
+
+        <div class="hero-div">
+            <picture>
+                <source srcset="images/place/animal-larger-Screen.webp" media="(min-width: 1000px)">
+                <img src="images/place/animal-small-mobile.webp" alt="A family of Fun animal of Madagascar gather together"
+                    width="640" height="850">
+            </picture>
+
+            <section class="stats-1">
+                <div class="text-banner">
+                    <h2>Data</h2>
+                </div>
+                <p>Area: <span class="value">587,041 sq km</span></p>
+                <p>Population: <span class="value">27,691,018</span></p>
+                <p>Capital: <span class="value">Antananarivo</span></p>
+                <p>Languages: <span class="value">Malagasy, French</span></p>
+                <p>Description: <span class="value">Fun Aviary</span></p>
+                <p>Time-Zone: <span class="value">UTC+3</span></p>
+                <p>Calling Code: <span class="value">+261</span></p>
+                <p>Internet TLD: <span class="value">.mg</span></p>
+            </section>
+
+            <section class="stats-2">
+                <div class="text-banner">
+                    <h2>Weather</h2>
+                </div>
+                <div class="weather-icon">
+                    <img src="images/place/weather-icon.svg" alt="Weather Scalable Vector Graphics Icon">
+                </div>
+                <p>Temperature: <span class="value" id="temp">10°C</span></p>
+                <p>Conditions: <span class="value">Partly Cloudy</span></p>
+                <p>Wind: <span class="value" id="speed">4.8 km/h</span></p>
+                <p>Windchill: <span class="value" id="windchill"></span></p>
+            </section>
+
+        </div>
+
+        <footer class="main-footer">
+            <p>copyright ©2025 <span id="current-year"></span> | Solomon Adeyera | Osogbo, Nigeria </p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
