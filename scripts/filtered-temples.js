@@ -58,6 +58,31 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   // Add more temple objects here...
+  {
+    templeName: "Adelaide Temple",
+    location: "Marden, South Australia",
+    dedicated: "2000, June, 15",
+    area: 10700,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/adelaide-australia-temple/adelaide-australia-temple-4359-main.jpg"
+  },
+  {
+    templeName: "Mendoza Temple",
+    location: "Mendoza, Argentina",
+    dedicated: "2024, September, 22",
+    area: 21000,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/mendoza-argentina-temple/mendoza-argentina-temple-51739-main.jpg"
+  },
+  {
+    templeName: "Taipei Temple",
+    location: "Taipei, Taiwan",
+    dedicated: "1984, November, 17-18",
+    area: 9945,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/taipei-taiwan-temple/taipei-taiwan-temple-8296-main.jpg"
+  },
+  
 ];
 
 
