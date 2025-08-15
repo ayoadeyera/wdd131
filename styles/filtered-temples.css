@@ -217,7 +217,7 @@ footer p {
     #main-nav ul {
         display: none;
         flex-direction: column;
-        background: #6a7994;
+        background: var(--primary-color);
         position: absolute;
         top: 60px;
         /* adjust as needed */
@@ -239,16 +239,12 @@ footer p {
         margin-top: 2rem;
         display: grid;
         grid-template-columns: 1fr;
-        /* Creates one column that takes up all available space */
         gap: 1rem;
-        /* Sets a gap of 1rem between rows */
-        /* padding-top: 5rem;  for ovalay effect of h1*/ 
-
     }
 
     .h1-container {
         /* Your mobile-specific styles here */
-        background: #3C0A64;
+        background: var(--primary-color);
         padding: 1rem;
         text-align: left;
         height: 4rem;
@@ -256,15 +252,9 @@ footer p {
 
     h1 {
         color: #fff;
-        /*below style are for overlay effect of h1/
-        /* background-color: #3C0A64; */
-        /* position: absolute; */
-        /* width: 100%; */
-        /* height: 5rem; */
     }
 
     h2 {
-        /* position: relative; for overlay effect of h1*/
         top: 1rem;
         text-align: center;
         font-size: 2rem;
@@ -319,9 +309,7 @@ footer p {
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        /* grid-template-rows: repeat(3, 1fr); */
         gap: 1rem;
-        /* padding: 1rem; */
     }
 
     h2 {
@@ -329,7 +317,7 @@ footer p {
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 2rem;
-        color: black;
+        color: var(--text-dark);
     }
 
 }
