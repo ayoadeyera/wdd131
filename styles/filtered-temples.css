@@ -1,0 +1,226 @@
+/* =========================
+   Color Palette
+========================= */
+:root {
+    --primary-color: #003049;       /* Rich Navy Blue */
+    --secondary-color: #669BBC;     /* Soft Sky Blue */
+    --accent-color: #FDF0D5;        /* Creamy Beige */
+    --highlight-color: #F77F00;     /* Warm Orange */
+    --muted-color: #C9D6DF;         /* Light Slate */
+    --text-dark: #1B1B1E;           /* Deep Charcoal */
+    --text-light: #FFFFFF;          /* White */
+    --background-light: #F5F5F5;    /* Light Gray */
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: "Robotic", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    height: 50%;    
+}
+
+
+header {
+    font-weight: 100;
+    background-color: var(--primary-color);
+    }
+
+h1, h2 {
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}    
+    
+h1 {
+    text-align: center;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem 0.5rem 0 0;
+    max-width: 93.75rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    background: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    max-width: 93.75rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+header {
+    font-weight: 100;
+    background: var(--primary-color);
+}
+
+
+/* Navigation styles */
+nav {
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+nav a {
+    display: block;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    min-height: 2.5rem;     
+    text-align: center;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;      
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+    color: var(--primary-color);
+    background: var(--background-light);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+nav.open ul {
+  display: flex;
+}
+
+
+.active {
+    color: var(--highlight-color);
+    font-weight: 600;
+    text-decoration: underline;     
+}
+
+/* mobile ** small view navigation **/
+#menu {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: 0;
+    background: none;
+    color: var(--primary-color);
+    /* color: rgb(18, 16, 16); */
+    position: absolute;
+
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 93.75rem;
+    margin: auto;
+}
+
+main,
+.gallery {
+    margin-top: 1rem; 
+
+}
+
+.gallery figure {
+    margin: 0;
+    /* Remove any top margin */
+    margin-bottom: 0;
+    /* Remove any bottom margin */
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+    
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--muted-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(2, 2, 2, 0.1);
+    overflow: hidden;
+}
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 2px;
+
+}
+
+.gallery figure figcaption {
+    /* background-color: #eee; */
+    color: var(--primary-color);
+    padding: 0.8em;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+    /* Pushes caption to the bottom if image is short */
+}
+
+/* Start with the Base styles for previous footer */
+footer {
+    background: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 2rem;
+    grid-column: 1 / 4;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.modification {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+}
+
