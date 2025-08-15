@@ -1,36 +1,3 @@
-// Get the span element where the current year will be displayed
-const copyrightYearSpan = document.getElementById("current-year");
-
-// Get the current year using JavaScript's Date object
-const currentYear = new Date().getFullYear();
-
-// Set the text content of the span to the current year
-copyrightYearSpan.textContent = currentYear;
-
-
-// Get the span element where the last modified date will be displayed
-const lastModifiedSpan = document.getElementById("last-modified");
-
-// Get the last modified date of the document
-const lastModifiedDate = document.lastModified;
-
-// Set the text content of the span to the last modified date
-lastModifiedSpan.textContent = lastModifiedDate;
-
-
-// Select the hamburger menu button and the navigation element
-const hamButton = document.querySelector('#menu');
-const navElement = document.querySelector('nav');
-
-// Add a click event listener to the hamburger button
-hamButton.addEventListener('click', () => {
-    // Toggle the 'open' class on the nav element to show/hide the menu
-    navElement.classList.toggle('open');
-
-    // Toggle the 'open' class on the button to change its icon
-    hamButton.classList.toggle('open');
-});
-
 //Replace deleted html dynamically
 
 const temples = [
@@ -135,27 +102,21 @@ document.querySelectorAll('#main-nav a').forEach(link => {
         document.querySelectorAll('#main-nav a').forEach(a => a.classList.remove('active'));
         this.classList.add('active');
 
-        let filter = this.textContent.trim();
+        const filter = this.dataset.filter || 'home';
 
         let filtered;
         switch (filter) {
-            case "Old":
-                filtered = temples.filter(t => {
-                    // Extract year from dedicated string
-                    let year = parseInt(t.dedicated.split(',')[0]);
-                    return year < 1900;
-                });
+            case "old":
+                // Use new Date() for more reliable year parsing
+                filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
                 break;
-            case "New":
-                filtered = temples.filter(t => {
-                    let year = parseInt(t.dedicated.split(',')[0]);
-                    return year > 2000;
-                });
+            case "new":
+                filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
                 break;
-            case "Large":
+            case "large":
                 filtered = temples.filter(t => t.area > 90000);
                 break;
-            case "Small":
+            case "small":
                 filtered = temples.filter(t => t.area < 10000);
                 break;
             default: // Home
