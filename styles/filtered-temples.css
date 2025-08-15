@@ -157,8 +157,7 @@ nav.open ul {
     text-align: center;
 }
 
-main,
-.gallery {
+main, .gallery {
     margin-top: 1rem; 
 
 }
@@ -169,7 +168,26 @@ main,
     margin: 1.5rem auto 0 auto;
     border-radius: 6px;
 
+    padding: 0.5rem;
+    width: 100%;
+    background:
+    #000;
+    animation: fade 15s;
 }
+
+@keyframes fade {
+    0% {
+    opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+}
+
+
 
 .gallery .label {
     color: var(--primary-color);

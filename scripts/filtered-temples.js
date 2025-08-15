@@ -77,8 +77,8 @@ const temples = [
   {
     templeName: "Taipei Temple",
     location: "Taipei, Taiwan",
-    dedicated: "1984, November, 17-18",
-    area: 9945,
+    dedicated: "1984, December, 2",
+    area: 116642,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/taipei-taiwan-temple/taipei-taiwan-temple-8296-main.jpg"
   },
