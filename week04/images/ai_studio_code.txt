@@ -1,0 +1,38 @@
++----------------------------------------+
+| HEADER                                 |
+| [Logo]                     [Hamburger] |
++----------------------------------------+
+| HERO SECTION                           |
+|                                        |
+|   "Unlock Your Full Potential" (h1)    |
+|                                        |
+|   [ Start Your Journey Button ]        |
+|                                        |
++----------------------------------------+
+| COURSE CATEGORIES                      |
+|                                        |
+|   +----------------------------------+ |
+|   | [Mindfulness Icon] Mindfulness   | |
+|   +----------------------------------+ |
+|   +----------------------------------+ |
+|   | [Productivity Icon] Productivity | |
+|   +----------------------------------+ |
+|   +----------------------------------+ |
+|   | [Wellness Icon] Wellness         | |
+|   +----------------------------------+ |
++----------------------------------------+
+| FEATURED PROGRAM                       |
+|                                        |
+|   [Program Image]                      |
+|   "The Productivity Masterclass" (h3)  |
+|   [ Learn More Button ]                |
+|                                        |
++----------------------------------------+
+| FOOTER                                 |
+|                                        |
+|   [Logo]                               |
+|   About | Courses | Community | Login  |
+|   Social Media Icons                   |
+|   © 2024 The Ascent Path               |
+|                                        |
++----------------------------------------+
