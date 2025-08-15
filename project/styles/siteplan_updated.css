@@ -1,18 +1,13 @@
-/* ================================================= */
-/*          THEME: PRISM & CLARITY PALETTE           */
-/* ================================================= */
-
 /* --- 1. SETUP & GLOBAL STYLES --- */
 :root {
-  --primary-bg: #2A3045;       /* Deep Indigo */
-  --secondary-bg: #F8F9FA;     /* Glacier White */
-  --card-bg: #FFFFFF;          /* Pure White */
-  --accent-color-1: #E535AB;   /* Vibrant Rose (for main actions) */
-  --accent-color-2: #16A085;   /* Lush Teal (for highlights) */
-  --text-dark: #212529;        /* Strong Charcoal */
-  --text-light: #F7FAFC;       /* Clean Off-White */
-  --border-color: #DEE2E6;     /* Neutral Gray Border */
-
+  --primary-bg: #2C3E50;
+  --secondary-bg: #F4F7F6;
+  --card-bg: #FFFFFF;
+  --accent-color: #E67E22;
+  --highlight-color: #9B59B6;
+  --text-dark: #34495E;
+  --text-light: #FFFFFF;
+  --border-color: #DCE1E3;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
 }
@@ -53,7 +48,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header .container {
@@ -84,7 +79,7 @@ header .container {
     width: 100%;
     background-color: var(--card-bg);
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-links li {
@@ -100,7 +95,7 @@ header .container {
 }
 
 .cta-button {
-    background-color: var(--accent-color-1);
+    background-color: var(--accent-color);
     color: var(--text-light);
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
@@ -110,7 +105,7 @@ header .container {
 }
 
 .cta-button:hover {
-    background-color: #c42da1; /* Darker Rose */
+    background-color: #255a9b;
 }
 
 .login-btn { display: none; } /* Hidden on mobile */
@@ -140,7 +135,7 @@ section {
 }
 
 #hero {
-    background-image: linear-gradient(rgba(42, 48, 69, 0.75), rgba(42, 48, 69, 0.75)), url('https://images.unsplash.com/photo-1506126613408-4e0e0f7da7ea?q=80&w=2070');
+    background-image: linear-gradient(rgba(26, 32, 44, 0.7), rgba(26, 32, 44, 0.7)), url('https://images.unsplash.com/photo-1506126613408-4e0e0f7da7ea?q=80&w=2070');
     background-size: cover;
     background-position: center;
     color: var(--text-light);
@@ -163,12 +158,7 @@ section {
     border-radius: 8px;
     text-align: center;
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-}
-
-/* Using the second accent color for beautiful, distinct highlights! */
-.category-card h3 {
-    color: var(--accent-color-2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 #featured .container {
@@ -202,7 +192,7 @@ footer a {
 
 footer ul { list-style: none; }
 footer li { margin-bottom: 0.5rem; }
-footer h4 { margin-bottom: 1rem; color: #a0aec0; /* Muted gray for subtitles */ }
+footer h4 { margin-bottom: 1rem; color: #a0aec0; }
 
 /* --- 5. RESPONSIVE DESKTOP STYLES --- */
 @media (min-width: 768px) {
