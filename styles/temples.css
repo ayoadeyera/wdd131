@@ -177,7 +177,7 @@ figure {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--muted-color);
+    background-color: var(--secondary-color);
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(2, 2, 2, 0.1);
     overflow: hidden;
@@ -192,7 +192,7 @@ figure {
 
 .gallery figure figcaption {
     /* background-color: #eee; */
-    color: var(--primary-color);
+    color: var(--text-dark);
     padding: 0.8em;
     text-align: center;
     font-size: 0.9em;
