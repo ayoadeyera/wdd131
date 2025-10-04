@@ -99,12 +99,6 @@ body {
     margin: 0.5rem;
 }
 
-.weather-icon img {
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-    float: right;
-}
 
 /* Footer text */
 .main-footer p {
@@ -138,8 +132,12 @@ body {
         right: auto;
         bottom: auto;
     }
+    
+.weather-icon img {
+    display: none; /* Hidden on mobile */
 }
-
+}
+    
 /* Desktop view adjustments */
 @media (min-width: 769px) {
     .page-container {
@@ -177,5 +175,13 @@ body {
     .main-footer p {
         position: relative;
         z-index: 1;
+    }
+
+    
+    .weather-icon img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    float: right;
     }
 }
