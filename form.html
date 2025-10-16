@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <meta name="description" content="This page demonstrates a simple responsive form">
+    <meta name="author" content="Solomon Adeyera">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+
+<body>
+     <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" class="wf2">
+            <fieldset>
+                <legend>Review Form</legend>
+                <label for="products" class="div-heading">Product Name</label>
+                <select id="products" name="productName" required>
+                    <option value="" disabled selected>Choose a product</option>
+                    </select>
+
+                <div class="div-heading">Overall Rating</div>
+                <div class="rating">
+                    <div class="star-option">
+                        <label for="star1">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                    </div>
+                    <div class="star-option">
+                        <label for="star2">★★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                    </div>
+                    <div class="star-option">
+                        <label for="star3">★★★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                    </div>
+                    <div class="star-option">
+                        <label for="star4">★★★★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                    </div>
+                    <div class="star-option">
+                        <label for="star5">★★★★★</label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="dateinstalled" class="div-heading">Date of Installation</label>
+                    <input type="date" id="dateinstalled" name="installationDate" required>
+                </div>
+
+                <div class="div-heading">Which features did you find useful in the product?
+                    <span>(Check all that apply)</span>
+                </div>
+                <input type="checkbox" id="durability" name="features" value="durability">
+                <label for="durability">Durability</label>
+                <input type="checkbox" id="easeofuse" name="features" value="ease of use">
+                <label for="easeofuse">Ease of Use</label>
+                <input type="checkbox" id="performance" name="features" value="performance">
+                <label for="performance">Performance</label>
+                <input type="checkbox" id="design" name="features" value="design">
+                <label for="design">Design</label>
+
+                <label for="review" class="review">Written Review <span>(Optional)</span></label>
+                <textarea id="review" name="review" rows="4" cols="50"
+                    placeholder="Write your review here...">
+                </textarea>
+
+                <label for="reviewerName" class="review">Your Name <span>(Optional)</span></label>
+                <input type="text" id="reviewerName" name="reviewerName">
+
+                <div>
+                    <button type="submit">Post Review</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+    <p>&copy;<span id="current-year"></span> 🌹 Responsive Form | Designed by Solomon Adeyera 🌹 | Osogbo, Nigeria</p>
+    <p class="last-modified">Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>

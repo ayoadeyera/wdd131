@@ -1,0 +1,375 @@
+:root {
+    --primary-bg: #025E73;
+    --secondary-bg: #F2F2F2;
+    --card-bg: #FFFFFF;
+    --accent-color: #07D9D9;
+    --secondary-accent: #BF622C;
+    --text-dark: #023859;
+    --text-light: #F7FAFC;
+    --border-color: #E2E8F0;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --error-color: red;
+    --valid-color: green;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: var(--secondary-bg);
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-dark); /* Set a default text color */
+}
+
+header {
+    width: 100%;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+    margin-bottom: 2.3rem;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*----------- FORM STYLING--------------*/
+
+.wf2 {
+    width: 95%;
+    max-width: 630px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.wf2 fieldset {
+    margin: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+    background: var(--card-bg);
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
+}
+
+.wf2 legend {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    letter-spacing: 1px;
+    text-align: left;
+    width: auto;
+    display: block;
+    background: var(--secondary-bg); /* Lighter background for the legend */
+    box-sizing: border-box;
+    font-family: var(--font-heading);
+}
+
+.wf2 div {
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+.wf2 select,
+.wf2 input[type="date"],
+.wf2 textarea,
+.wf2 input[type="text"] {
+    width: 100%;
+    padding: 0.7em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+}
+
+/* Focused state for inputs */
+.wf2 select:focus,
+.wf2 input[type="date"]:focus,
+.wf2 textarea:focus,
+.wf2 input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(7, 217, 217, 0.5); /* Accent color glow */
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+    gap: 0;
+}
+
+.star-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star-option label {
+    font-size: 1.5em; /* Slightly larger stars */
+    color: var(--secondary-accent); /* Use secondary accent for stars */
+    margin-bottom: 0.2em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-option label:hover {
+    color: var(--secondary-accent); /* Maintain color on hover */
+}
+
+.star-option input[type="radio"] {
+    accent-color: var(--secondary-accent);
+    margin: 0;
+}
+
+.rating input[type="radio"] {
+    width: 1.3em;
+    height: 1.3em;
+    transform: scale(1.3);
+    accent-color: var(--secondary-accent);
+    margin: 0.2em 0;
+}
+
+.wf2 label[for^="durability"],
+.wf2 label[for^="easeofuse"],
+.wf2 label[for^="performance"],
+.wf2 label[for^="design"] {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    gap: 0.5em;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.wf2 input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    transform: scale(1.2);
+    accent-color: var(--primary-bg); /* Use primary color for checkboxes */
+    margin-right: 0.5em;
+}
+
+.div-heading span {
+    display: block;
+    font-size: 0.95em;
+    color: var(--text-dark);
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0.5em;
+}
+
+.review,
+.div-heading {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+}
+
+.review span {
+    display: inline;
+    color: var(--text-dark);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.95em;
+    font-family: var(--font-body);
+    margin-left: 0.5em;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    padding: 0.7em;
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    resize: vertical;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.wf2 input[type="text"] {
+    margin-bottom: 1em;
+}
+
+.wf2 button,
+.wf2 input[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    background: var(--primary-bg);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-family: var(--font-heading);
+}
+
+.wf2 button:hover,
+.wf2 input[type="submit"]:hover {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Validation Styles */
+.wf2 input:required {
+    border-bottom: solid 3px var(--error-color);
+}
+
+.wf2 select:required {
+    border-bottom: 3px solid var(--error-color);
+}
+
+.wf2 input:required:valid {
+    border-bottom: solid 3px var(--valid-color);
+}
+
+.wf2 select:required:valid {
+    border-bottom: solid 3px var(--valid-color);
+}
+
+.rating {
+    border-bottom: 5px solid transparent;
+    padding-bottom: 0.5em;
+}
+
+/* Radio button validation (more visible feedback) */
+.rating input[type="radio"]:required:invalid ~ label {
+    color: var(--error-color);
+    /* Color the stars red if none selected */
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: var(--secondary-accent);
+    /* Keep selected stars the accent color */
+}
+
+
+/*----------- END FORM STYLING--------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-bg);
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    color: var(--text-light);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Responsive styles for small screen */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .wf2 {
+        width: 99%;
+        max-width: 99%;
+        padding: 0.5rem;
+    }
+
+    .wf2 fieldset {
+        padding: 0.7rem 0.5rem 1rem 0.5rem;
+    }
+
+    .div-heading,
+    .review {
+        font-size: 0.95rem;
+        padding-top: 0.7rem;
+    }
+
+    .star-option label {
+        font-size: 1.3em;
+    }
+
+    textarea,
+    .wf2 input[type="text"],
+    .wf2 input[type="date"],
+    .wf2 select {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+
+    .wf2 button,
+    .wf2 input[type="submit"] {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+}
+
+/* Responsive styles for larger screens */
+
+@media (min-width: 1000px) {
+    .wf2 {
+        max-width: 700px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Make footer responsive */
+footer {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0.2rem 0.5rem 0.2rem;
+    box-sizing: border-box;
+}
