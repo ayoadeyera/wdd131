@@ -1,0 +1,54 @@
+:root {
+    --primary-bg: #025E73;
+    --secondary-bg: #F2F2F2;
+    --card-bg: #FFFFFF;
+    --accent-color: #07D9D9;
+    --secondary-accent: #BF622C;
+    --text-dark: #023859;
+    --text-light: #F7FAFC;
+    --border-color: #E2E8F0;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --error-color: red;
+    --valid-color: green;
+}
+
+body {
+    background-color: var(--secondary-bg);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+h1 {
+    color: var(--accent-color);
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+    font-family: var(--font-heading);
+}
+
+p {
+    color: var(--text-dark);
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+a {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+a:hover {
+    background-color: var(--secondary-accent);
+}
