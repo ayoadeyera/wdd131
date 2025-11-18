@@ -258,5 +258,5 @@ footer p {
 .modification {
     font-style: italic;
     font-size: 0.8rem;
-    color: var(--highlight-color);
+    color: var(--muted-color);
 }

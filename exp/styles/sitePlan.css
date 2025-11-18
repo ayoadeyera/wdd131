@@ -1,0 +1,230 @@
+:root {
+    /* CSS HEX */
+    --brunswick-green: #293E31ff;
+    --Crayola: #FE8340ff;
+    --Bone: #DACEC2ff;
+    --white: rgb(255, 255, 255);
+
+    --merriweather-regular-font-family: "Merriweather", sans-serif;
+    --merriweather-regular-font-weight: 400;
+    --merriweather-regular-font-style: normal;
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-weight: 400;
+    --lato-regular-font-style: normal;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: var(--lato-regular-font-family);
+}
+
+header {
+    background: var(--brunswick-green);
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--merriweather-regular-font-family);
+    font-weight: bold;
+}
+
+header h2 {
+    text-align: center;
+    font-family: var(--merriweather-regular-font-family);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+
+a {
+    color: rgb(4, 42, 157);
+    /* text-decoration: ; */
+}
+
+a:hover {
+    color: #7a2d1b;
+    text-decoration: underline;
+}
+
+#header-p {
+    font-style: italic;
+    color: #f9f7f5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: rgb(77, 30, 20);
+    width: 80%;
+}
+
+h2 {
+    font-family: var(--merriweather-regular-font-family);
+    font-weight: bold;
+    color: var(--brunswick-green);
+}
+
+section {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+.titleEx {
+    font-family: var(--merriweather-regular-font-family);
+    color: var(--brunswick-green);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.paragraphEx {
+    font-family: var(--lato-regular-font-family);
+    font-weight: 600;
+    color: var(--Chestnut);
+    font-size: 16px;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Adjust as needed */
+}
+
+.headerEx,
+.bodyEx,
+.footerEx {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    padding: 0;
+    /* Remove extra padding if any */
+    margin-bottom: 1rem;
+    /* Adjust the value as needed */
+}
+
+.headerEx {
+    background-color: var(--brunswick-green);
+    color: var(--white);
+}
+
+.bodyEx {
+    background-color: var(--Crayola);
+    color: #000;
+}
+
+.footerEx {
+    background-color: var(--Bone);
+    color: #000;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-family: var(--lato-regular-font-family);
+    font-weight: var(--lato-regular-font-weight);
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+img {
+    display: block;
+    margin: 1rem;
+    width: 50%;
+    background: #000;
+}
+
+
+/* Responsive styles for mobile view */
+@media (max-width: 700px) {
+    body {
+        width: 100%;
+        min-width: 0;
+    }
+
+    header,
+    main {
+        width: 98%;
+        min-width: 0;
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .headerEx,
+    .bodyEx,
+    .footerEx,
+    .mainEx {
+        height: auto;
+        font-size: 1rem;
+        padding: 0.5rem;
+        word-break: break-all;
+        display: block;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+}
+
+/* Responsive styles for large view */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header,
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        width: 60%;
+        max-width: 600px;
+    }
+}

@@ -1,0 +1,606 @@
+/* --- Custom Styles --- */
+:root {
+    --brunswick-green: #293E31ff;
+    --Crayola-orange: #FE8340ff;
+    --Bone-grey: #DACEC2ff;
+    --white-text: #fff;
+    --text-color: #000;
+    --hero-overlay: rgba(0, 0, 0, 0.4);
+    /* Dark overlay for text readability */
+    --btn-primary-bg: #FE8340ff;
+    --btn-secondary-bg: #E67E22;
+    /* Slightly different orange for second button */
+
+
+    --merriweather-regular-font-family: "Merriweather", sans-serif;
+    --merriweather-regular-font-style: normal;
+    --merriweather-bold-font-weight: 700;
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-style: normal;
+    --lato-bold-font-weight: 600;
+
+}
+
+/* --- General Styles --- */
+
+body {
+    font-family: var(--lato-regular-font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: rgb(32, 43, 35);
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1400px;
+    /* Max width for the entire layout */
+    margin: 0 auto;
+    background-color: var(--white-text);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/*---- Header Styling -----*/
+.main-header {
+    background-color: var(--brunswick-green);
+    color: var(--white-text);
+    position: relative;
+    /* For the orange top bar */
+}
+
+.header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    flex: 0 0 auto;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: var(--merriweather-bold-font-family);
+    color: var(--text-color);
+    background-color: var(--Crayola-orange);
+    position: relative;
+    padding-left: 30px;
+    width: 23%;
+    /* Space for the orange line if desired */
+    /* height: 3em; */
+}
+
+.logo span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.8;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/*----- Navigation Element Styling ------*/
+.main-nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: var(--white-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--merriweather-regular-font-family);
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--Crayola-orange);
+    /* text-decoration: underline double;
+    background-color: #7e57c2;     */
+}
+
+.active {
+    color: var(--Crayola-orange);
+}
+
+/* Hamburger/mobile/small/ view navigation styling **/
+#menu {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 0;
+    background: none;
+    color: rgb(255, 255, 255);
+    /* color: rgb(18, 16, 16); */
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+/*--- Buttons Styling----*/
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--btn-primary-bg);
+    color: var(--text-color);
+    border: 2px solid var(--btn-primary-bg);
+}
+
+.primary-btn:hover {
+    background-color: #c13406;
+    /* Example darker orange */
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--btn-secondary-bg);
+    color: var(--text-color);
+    border: 2px solid var(--btn-secondary-bg);
+}
+
+.secondary-btn:hover {
+    background-color: #c13406;
+    /* Example darker orange */
+    transform: translateY(-2px);
+}
+
+/*---Support Section Styling ---- */
+.support-section {
+    display: flex;
+    flex-direction: row;
+    /* Default for larger screens */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 100px;
+    background-color: var(--Bone-grey);
+}
+
+.support-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.support-content h3 {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.support-content p {
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.support-content span {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: var(--lato-regular-font-family);
+}
+
+.support-image {
+    flex: 1;
+    max-width: 400px;
+    /* text-align: center; */
+    text-align: right;
+}
+
+.support-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*----Form Section styling -----*/
+
+.form-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background: #fff;
+}
+
+.form-heading::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--brunswick-green);
+    /* Green line */
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+.form-heading h3 {
+    color: var(--brunswick-green);
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: var(--lato-bold-font-family);
+}
+
+.form-heading p {
+    font-family: var(--lato-bold-font-family);
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.wf3 {
+    width: 95%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(41, 62, 49, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.wf3 fieldset {
+    border: 2px solid rgb(72, 112, 87);
+    border-radius: 8px;
+    padding: 18px 14px 14px 14px;
+    margin-bottom: 20px;
+    background: #f8f8f8;
+}
+
+.wf3 legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 0 10px;
+    letter-spacing: 1px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(41, 62, 49, 0.10);
+}
+
+.wf3 label,
+div {
+    font-weight: 600;
+    color: rgb(72, 112, 87);
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.wf3 label span {
+    display: inline;
+    color: var(--text-color);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.95em;
+    font-family: var(--lato-bold-font-family);
+    margin-left: 0.5em;
+}
+
+.wf3 input[type="text"],
+.wf3 input[type="tel"],
+.wf3 input[type="email"],
+.wf3 input[type="date"],
+.wf3 textarea,
+.wf3 select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #daccc2;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    background: #f8f8f8;
+    transition: border-color 0.2s;
+}
+
+.wf3 input:focus,
+.wf3 textarea:focus,
+.wf3 select:focus {
+    border-color: rgb(72, 112, 87);
+    outline: none;
+}
+
+.wf3 button,
+.wf3 input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: 18px auto 0 auto;
+    padding: 12px 32px;
+    background: var(--btn-secondary-bg);
+    color: var(--text-color);
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+
+}
+
+.wf3 button:hover,
+.wf3 input[type="submit"]:hover {
+    background: var(--brunswick-green);
+    color: #fff;
+}
+
+
+.member-type {
+    display: block;
+    gap: 28px;
+    /* Adjust for more or less space */
+    margin-bottom: 16px;
+}
+
+.member-type label {
+    display: flex;
+    padding-left: 28px;
+    cursor: pointer;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.member-type input[type="radio"] {
+    display: flex;
+    width: 1em;
+    height: 1em;
+    transform: scale(1.3);
+    /* Increase size of radio buttons */
+    accent-color: rgb(72, 112, 87);
+    margin: 0.2em 0;
+}
+
+.member-type input[type="radio"]:required {
+    /* fallback for browsers, but not perfect */
+    outline: 1.5px solid red;
+}
+
+.member-type input[type="radio"]:required:valid {
+    /* fallback for browsers, but not perfect */
+    outline: 1.5px solid green;
+}
+
+.wf3 input:required {
+    border-bottom: solid 3px red;
+}
+
+.wf3 select:required {
+    border-bottom: 3px solid red;
+    /* Or use border: 2px solid red; for all sides */
+}
+
+.wf3 input:required:valid {
+    border-bottom: solid 3px green;
+}
+
+.wf3 select:required:valid {
+    border-bottom: solid 3px green;
+}
+
+/*---- Footer Styling ---- */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brunswick-green);
+    padding: 1rem 1.2rem;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.footer-content {
+    flex: 2 1 300px;
+    padding-left: 4rem;
+}
+
+.footer-content p {
+    color: var(--white-text);
+    font-size: 1.2rem;
+}
+
+.footer-icon-bar {
+    flex: 1 1 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    padding-right: 2em;
+}
+
+.social-icons .icon {
+    width: 3em;
+    height: 3em;
+    margin: 0 0.5em;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    filter: brightness(0.7) drop-shadow(0 0 2px var(--Crayola-orange, orange));
+}
+
+/* --- Responsive Design --- */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .header-top-bar {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /*Hide menu by default on mobile*/
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--brunswick-green);
+        position: static;
+        width: 100%;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-nav ul.open {
+        display: flex !important;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        z-index: 1100;
+        background: var(--brunswick-green);
+        color: var(--white-text);
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+        background-color: var(--Crayola-orange);
+        border-radius: 6px;
+    }
+
+    .logo span {
+        display: block;
+        font-size: 0.6em;
+        padding-left: 0;
+        margin-top: 0.2em;
+        color: var(--text-color);
+        opacity: 0.85;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    .footer-bottom-bar {
+        justify-content: center;
+        padding: 8px 15px;
+    }
+
+    .support-section {
+        flex-direction: column;
+        /* Stack content and image vertically */
+        padding: 30px 15px;
+        gap: 50px;
+    }
+
+    .support-content {
+        max-width: 100%;
+    }
+
+    .support-image {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .support-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .wf3 {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px;
+        gap: 0;
+    }
+
+    .footer-content {
+        padding-left: 0;
+        font-size: 0.98em;
+        margin-bottom: 0;
+    }
+
+    .footer-icon-bar {
+        justify-content: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .social-icons .icon {
+        width: 3em;
+        height: 3em;
+        margin: 0 0.3em;
+    }
+}
+
+
+/* Large screen adjustments (if needed beyond general styles) */
+@media (min-width: 1024px) {
+
+    /* Adjustments for very large screens or specific element sizing */
+    .page-container {
+        border-radius: 10px;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    #main-nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+    }
+
+}

@@ -1,0 +1,618 @@
+/* --- Custom Styles --- */
+:root {
+    --brunswick-green: #293E31ff;
+    --Crayola-orange: #FE8340ff;
+    --Bone-grey: #DACEC2ff;
+    --white-text: #fff;
+    --text-color: #000;
+    --hero-overlay: rgba(0, 0, 0, 0.4);
+    /* Dark overlay for text readability */
+    --btn-primary-bg: #FE8340ff;
+    --btn-secondary-bg: #E67E22;
+    /* Slightly different orange for second button */
+
+
+    --merriweather-regular-font-family: "Merriweather", sans-serif;
+    --merriweather-regular-font-style: normal;
+    --merriweather-bold-font-weight: 700;
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-style: normal;
+    --lato-bold-font-weight: 600;
+}
+
+/* --- General Styles --- */
+
+body {
+    font-family: var(--lato-regular-font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f4f4f4;
+}
+
+/*--- Header Styling ---- */
+.main-header {
+    background-color: var(--brunswick-green);
+    color: var(--white-text);
+    position: relative;
+    /* For the orange top bar */
+}
+
+.header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    flex: 0 0 auto;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: var(--merriweather-bold-font-family);
+    color: var(--text-color);
+    background-color: var(--Crayola-orange);
+    position: relative;
+    padding-left: 30px;
+    width: 23%;
+    /* Space for the orange line if desired */
+    /* height: 3em; */
+}
+
+.logo span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.8;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/*----Navigation Styling-----*/
+.main-nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    /* position: relative; */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: var(--white-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--merriweather-regular-font-family);
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--Crayola-orange);
+    /* text-decoration: underline double;
+    background-color: #7e57c2;     */
+}
+
+.active {
+    color: var(--Crayola-orange);
+}
+
+/* Hamburger/mobile/ small view navigation **/
+#menu {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 0;
+    background: none;
+    color: rgb(255, 255, 255);
+    /* color: rgb(18, 16, 16); */
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+/*---Hero Park Section Styling ----- */
+.hero-parks-section {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+    /* responsive height */
+    overflow: hidden;
+}
+
+.hero-parks-section picture {
+    position: static;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.hero-parks-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-parks-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--white-text);
+    /* Semi-transparent overlay for text readability */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    max-width: 40vw;
+}
+
+.hero-parks-content h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    font-family: var(--merriweather-regular-font-weight);
+    color: var(--white-text);
+}
+
+.hero-parks-content p {
+    font-size: 1.2em;
+    margin-top: 0;
+    font-family: var(--lato-regular-font-family);
+    color: var(--white-text);
+}
+
+/* Buttons styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--btn-primary-bg);
+    color: var(--text-color);
+    border: 2px solid var(--btn-primary-bg);
+}
+
+.primary-btn:hover {
+    background-color: #c13406;
+    /* Example darker orange */
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--btn-secondary-bg);
+    color: var(--text-color);
+    border: 2px solid var(--btn-secondary-bg);
+}
+
+.secondary-btn:hover {
+    background-color: #c13406;
+    /* Example darker orange */
+    transform: translateY(-2px);
+}
+
+/*----Main-tag & Support Section Styling----*/
+/* Example CSS for the described classes */
+
+.div-heading {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.div-heading::after {
+    content: "";
+    display: block;
+    width: 120px;
+    /* Adjust width as needed */
+    height: 3px;
+    /* Thickness of the border */
+    margin: 18px auto 0 auto;
+    /* Space above the border */
+    background: #293E31ff;
+    /* Border color */
+    box-shadow: 0 4px 8px rgba(33, 122, 59, 0.3);
+    /* Shadow effect */
+    border-radius: 2px;
+}
+
+
+.div-heading h2 {
+    color: var(--brunswick-green);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.div-heading p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+    /* border-bottom: 1px solid #293E31ff; */
+    /* padding-bottom: 18px; */
+}
+
+/* Card base styles */
+.cards-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.parks-card1 {
+    display: flex;
+    align-items: flex-start;
+    margin: 60px 0;
+    gap: 40px;
+}
+
+.parks-card2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 60px 0;
+    gap: 40px;
+}
+
+/* Card image container with layered effect */
+.card-image-container {
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    height: 320px;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+    transform: rotate(-2deg);
+}
+
+/* Green outline behind image */
+.card-image-container::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #293E31ff;
+    z-index: 1;
+    border-radius: 4px;
+    transform: rotate(3deg);
+}
+
+/* Card text */
+.card-text {
+    flex: 1;
+    /* margin-top: 30px; */
+}
+
+.card-text h3 {
+    color: var(--brunswick-green);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+/*----Support Section Styling--- */
+.support-section {
+    display: flex;
+    flex-direction: row;
+    /* Default for larger screens */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 100px;
+    background-color: var(--Bone-grey);
+}
+
+.support-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.support-content h3 {
+    font-size: 2.2em;
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.support-content p {
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.support-content span {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: var(--lato-regular-font-family);
+}
+
+.support-image {
+    flex: 1;
+    max-width: 400px;
+    /* text-align: center; */
+    text-align: right;
+}
+
+.support-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brunswick-green);
+    color: var(--white-text);
+    padding: 1rem 1.2rem;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.footer-content {
+    flex: 2 1 300px;
+    padding-left: 4rem;
+}
+
+.footer-icon-bar {
+    flex: 1 1 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    padding: 0;
+    padding-right: 2em;
+}
+
+.social-icons .icon {
+    width: 3em;
+    height: 3em;
+    margin: 0 0.5em;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    filter: brightness(0.7) drop-shadow(0 0 2px var(--Crayola-orange, orange));
+}
+
+/* --- Responsive Design --- */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .header-top-bar {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /*Hide menu by default on mobile*/
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--brunswick-green);
+        position: static;
+        width: 100%;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-nav ul.open {
+        display: flex !important;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        z-index: 1100;
+        background: var(--brunswick-green);
+        color: var(--white-text);
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+        background-color: var(--Crayola-orange);
+        border-radius: 6px;
+    }
+
+    .logo span {
+        display: block;
+        font-size: 0.6em;
+        padding-left: 0;
+        margin-top: 0.2em;
+        color: var(--text-color);
+        opacity: 0.85;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    /*---- Hero Section Responsiveness--- */
+    .hero-parks-section {
+        min-height: 600px;
+        height: 40vh;
+        /* Responsive height for mobile */
+    }
+
+    .hero-parks-content {
+        left: 5%;
+        margin-bottom: 5%;
+        max-width: 90vw;
+        /* Adjust content width for mobile */
+    }
+
+    .hero-parks-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-parks-content p {
+        font-size: 1em;
+    }
+
+
+    /*---- Main Content Responsiveness--- */
+    .parks-card1,
+    .parks-card2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-image-container,
+    .card-text {
+        margin-top: 0;
+    }
+
+    /*---- Support Section Responsiveness--- */
+    .support-section {
+        flex-direction: column;
+        /* Stack content and image vertically */
+        padding: 30px 15px;
+        gap: 50px;
+    }
+
+    .support-content {
+        max-width: 100%;
+    }
+
+    .support-image {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .support-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /*--- Footer Section Responsivesness--- */
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px;
+        gap: 0;
+    }
+
+    .footer-content {
+        padding-left: 0;
+        font-size: 0.98em;
+        margin-bottom: 0;
+    }
+
+    /* .footer-bottom-bar {
+        justify-content: center;
+        padding: 8px 15px;
+    } */
+
+    .footer-icon-bar {
+        justify-content: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .social-icons .icon {
+        width: 3em;
+        height: 3em;
+        margin: 0 0.3em;
+    }
+}
+
+
+/* Large screen adjustments (if needed beyond general styles) */
+@media (min-width: 1024px) {
+
+    /* Adjustments for very large screens or specific element sizing */
+    .page-container {
+        border-radius: 10px;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    #main-nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+    }
+
+    .hero-section {
+        height: 550px;
+        /* Taller hero section on very large screens */
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+}

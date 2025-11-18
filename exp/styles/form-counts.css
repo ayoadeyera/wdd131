@@ -1,0 +1,62 @@
+:root {
+    --brunswick-green: #293E31ff;
+    --Crayola-orange: #FE8340ff;
+    --Bone-grey: #DACEC2ff;
+    --white-text: #fff;
+    --text-color: #000;
+    --hero-overlay: rgba(0, 0, 0, 0.4);
+    /* Dark overlay for text readability */
+    --btn-primary-bg: #FE8340ff;
+    --btn-secondary-bg: #E67E22;
+    /* Slightly different orange for second button */
+
+
+    --merriweather-regular-font-family: "Merriweather", sans-serif;
+    --merriweather-regular-font-style: normal;
+    --merriweather-bold-font-weight: 700;
+
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-style: normal;
+    --lato-bold-font-weight: 600;
+}
+
+body {
+    background-color: var(--Bone-grey);
+    font-family: var(--lato-regular-font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: var(--text-color);
+    font-family: var(--merriweather-bold-font-family);
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+p {
+    color: var(--text-color);
+    font-family: var(--lato-regular-font-family);
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+a {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    background-color: var(--btn-secondary-bg);
+    color:var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+a:hover {
+    background-color: var(--Crayola-orange);
+}
