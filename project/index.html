@@ -21,7 +21,11 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">The Ascent Path</a>
+            <a href="#" class="logo-container">
+                <!-- IMPORTANT: Replace the src with the path to your PNG file -->
+                <img src="images/logo.jpg" alt="The Ascent Path Logo" class="logo-img">
+                <span class="logo-text">The Ascent Path</span>
+            </a>    
             <nav id="main-nav">
                 <ul class="nav-links">
                     <li><a href="#">Courses</a></li>
@@ -40,14 +44,22 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero">            
+        <section id="hero">
+            
+            <!-- IMAGE ELEMENT: Placed inside the section -->
+            <!-- IMPORTANT: Replace the src with the path to your .webp or .png file -->
+            <img src="images/homeherolarge-1.webp" alt="A background image representing personal growth and ascent" class="hero-bg-img">
+
             <div class="container">
-                <h1>Unlock Your Full Potential</h1>
-                <p>A digital platform for personal growth and transformation. Start your journey today.</p>
-                <a href="#" class="cta-button">Start Your Journey</a>
+                <div class="hero-text">
+                    <!-- Added fade-in-up class for visual effect -->
+                    <h1 class="fade-in-up">Unlock Your Potential, Master Your Path.</h1>
+                    <p class="fade-in-up">The Ascent Path provides curated courses and a supportive community to help you achieve clarity, productivity, and personal mastery.</p>
+                    <!-- Added fade-in-up class for visual effect -->
+                    <a href="#" class="cta-button fade-in-up">Start Your Journey Today</a>
+                </div>
             </div>
         </section>
-
         <!-- Categories Section -->
         <section id="categories">
             <div class="container">

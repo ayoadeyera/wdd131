@@ -41,6 +41,12 @@ body {
     padding: 0 20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-dark);
+}
 h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -67,12 +73,17 @@ header .container {
     align-items: center;
 }
 
-.logo {
+.logo-text {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-bg);
-    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+.logo-img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .nav-links {
@@ -152,19 +163,56 @@ section {
     padding: 4rem 0;
 }
 
-#hero {
-    background-image: linear-gradient(rgba(2, 94, 115, 0.7), rgba(2, 56, 89, 0.7)), url('https://images.unsplash.com/photo-1506126613408-4e0e0f7da7ea?q=80&w=2070');
-    background-size: cover;
-    background-position: center;
-    color: var(--text-light);
-    text-align: center;
-    padding: 6rem 0;
-        position: static;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1;
-}
+        #hero {
+            position: relative; /* Needed for absolute positioning of image and text */
+            color: var(--text-light);
+            /* Min height ensures the section is visible even if content is short */
+            min-height: 50vh; 
+            overflow: hidden; 
+            
+            /* Flex properties to center the text content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center; /* Center text inside the section */
+        }
+
+
+        /* The Image element that acts as the background */
+        #hero .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the entire container */
+            z-index: 0;
+        }
+
+
+        /* Hero Overlay for Readability */
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Dark semi-transparent overlay to ensure text visibility */
+            background-color: rgba(2, 56, 89, 0.9); 
+            z-index: 1; /* Above the image (0) */
+        }
+        
+        #hero .container {
+            position: relative; 
+            z-index: 2; /* Ensures content is above the overlay (1) */
+            padding: 4rem 20px; /* Add internal padding for space */
+        }
+        
+        #hero .hero-text {
+            max-width: 800px; /* Limit text width for readability */
+            margin: 0 auto;
+        }
 
 #hero h1 { font-size: 3rem; }
 #hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -291,3 +339,5 @@ footer h4 { margin-bottom: 1rem; color: #f2f2f2; text-transform: uppercase; font
         justify-content: flex-start;
     }
 }
+
+
