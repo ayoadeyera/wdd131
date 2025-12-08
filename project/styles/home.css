@@ -217,7 +217,9 @@ section {
 #hero h1 { font-size: 3rem; }
 #hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
- #core-categories {
+
+ /* Core Categories Section */
+        #core-categories {
             padding: 4rem 0;
             background-color: var(--secondary-bg);
             text-align: center;
@@ -225,6 +227,8 @@ section {
         
         .category-grid {
             display: grid;
+            /* Mobile Default: 1 column */
+            grid-template-columns: repeat(1, 1fr); 
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -280,6 +284,9 @@ section {
             font-size: 0.8rem;
             padding: 0.6rem 1.2rem;
         }
+
+
+
 #featured {
     background-color: var(--card-bg);
 }
@@ -354,10 +361,10 @@ footer h4 { margin-bottom: 1rem; color: #f2f2f2; text-transform: uppercase; font
     .nav-links li {
         margin: 0 1rem;
     }
-
-    .categories-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+        
+        .category-grid {
+                grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns on desktop */
+            }
 
     #featured .container {
         grid-template-columns: 1fr 1fr;
@@ -377,5 +384,3 @@ footer h4 { margin-bottom: 1rem; color: #f2f2f2; text-transform: uppercase; font
         justify-content: flex-start;
     }
 }
-
-
