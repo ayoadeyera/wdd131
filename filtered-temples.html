@@ -22,13 +22,14 @@
     <header>
         <h1>Temple Album</h1>
         <button type="button" id="menu">Menu</button>
-        <nav>
+        <!-- Added id="main-nav" and data-filter attributes on the links so filtered-temples.js can find them -->
+        <nav id="main-nav">
             <ul>
-                <li><a href="#" title="Home" class="active">Home</a></li>
-                <li><a href="#" title="Old">Old</a></li>
-                <li><a href="#" title="New">New</a></li>
-                <li><a href="#" title="Large">Large</a></li>
-                <li><a href="#" title="Small">Small</a></li>
+                <li><a href="#" title="Home" class="active" data-filter="home">Home</a></li>
+                <li><a href="#" title="Old" data-filter="old">Old</a></li>
+                <li><a href="#" title="New" data-filter="new">New</a></li>
+                <li><a href="#" title="Large" data-filter="large">Large</a></li>
+                <li><a href="#" title="Small" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
