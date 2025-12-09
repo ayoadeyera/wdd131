@@ -89,7 +89,7 @@ const temples = [
 
 function displayFilteredTemples(filteredTemples) {
     const gallery = document.querySelector(".gallery");
-    gallery.innerHTML = ""; // Clear previous cards
+    gallery.innerHTML = ""; 
 
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
@@ -123,7 +123,6 @@ document.querySelectorAll('#main-nav a').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
 
-        // Remove 'active' class from all links and add to clicked one
         document.querySelectorAll('#main-nav a').forEach(a => a.classList.remove('active'));
         this.classList.add('active');
 
@@ -132,7 +131,6 @@ document.querySelectorAll('#main-nav a').forEach(link => {
         let filtered;
         switch (filter) {
             case "old":
-                // Use new Date() for more reliable year parsing
                 filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
                 break;
             case "new":
