@@ -170,7 +170,7 @@ figcaption {
 }
 
 .secondary-accent {
-    background-color: #BF622C;
+    background-color: rgba(191, 98, 44, 0.5);
     color: var(--text-light);
 }
 
