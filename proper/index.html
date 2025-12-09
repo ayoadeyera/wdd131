@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Ascent Path - Unlock your potential through curated courses, expert programs, and a supportive community focused on personal growth.">
+    <title>The Ascent Path - Unlock Your Potential</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.jpg" alt="The Ascent Path Logo" class="logo-img">
+                <span class="logo-text">The Ascent Path</span>
+            </a>    
+            <nav id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button login-btn">Login</a>
+            <button id="hamburger-menu" aria-label="Open Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <img src="images/homeherolarge-1.webp" alt="A background image representing personal growth and ascent" class="hero-bg-img" loading="lazy">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Unlock Your Potential, Master Your Path.</h1>
+                    <p>The Ascent Path provides curated courses and a supportive community to help you achieve clarity, productivity, and personal mastery.</p>
+                    <a href="courses.html" class="cta-button">Start Your Journey Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Categories Section -->
+        <section id="core-categories">
+            <div class="container">
+                <h2 class="section-title">Our Core Learning Paths</h2>
+                <div class="card-grid three-col">
+                    
+                    <!-- Clarity Path -->
+                    <div class="card">
+                        <img src="images/clarity_path.jpg" alt="Illustration of a clear mind or focused light" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Clarity Path</h3>
+                            <p>Identify your true North. This path provides powerful frameworks and journaling exercises to eliminate mental clutter and define your life's purpose and goals.</p>
+                            <a href="courses.html" class="cta-button">Explore Courses</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mastery Path -->
+                    <div class="card">
+                        <img src="images/mastery_path.png" alt="Illustration of a challenging mountain climb" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Mastery Path</h3>
+                            <p>Master deep work, focus, and peak performance. Learn advanced techniques for sustained productivity and skill acquisition without falling victim to burnout.</p>
+                            <a href="courses.html" class="cta-button">Explore Courses</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Path -->
+                    <div class="card">
+                        <img src="images/comm_path.webp" alt="Illustration of connected nodes or people networking" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Community Path</h3>
+                            <p>Unlock the power of shared growth. Connect with a global network of ambitious learners for accountability, mentorship, and collective wisdom.</p>
+                            <a href="community.html" class="cta-button">Join Community</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Program Section -->
+        <section id="featured">
+            <div class="container">
+                <div class="featured-image">
+                    <img src="images/productivity.jpg" alt="A picture representing a featured program" loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <h2>Featured: The Productivity Masterclass</h2>
+                    <p>Transform your approach to work and life. Learn the systems and mindsets used by top performers to achieve extraordinary results without burnout.</p>
+                    <p>This comprehensive 8-week program combines proven time management techniques, deep work strategies, and sustainable productivity habits.</p>
+                    <a href="courses.html" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h4>The Ascent Path</h4>
+                <p>Evolve from within.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> The Ascent Path. All Rights Reserved.</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

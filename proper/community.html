@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join The Ascent Path community - connect with like-minded individuals committed to personal growth and transformation.">
+    <title>Community - The Ascent Path</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.jpg" alt="The Ascent Path Logo" class="logo-img">
+                <span class="logo-text">The Ascent Path</span>
+            </a>    
+            <nav id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button login-btn">Login</a>
+            <button id="hamburger-menu" aria-label="Open Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section style="background-color: var(--primary-bg); color: var(--text-light); padding: 3rem 0; text-align: center;">
+            <div class="container">
+                <h1>Join Our Community</h1>
+                <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem;">
+                    Connect with thousands of learners worldwide who are committed to personal growth and transformation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Community Benefits -->
+        <section style="padding: 4rem 0; background-color: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Why Join Our Community?</h2>
+                <div class="card-grid three-col">
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Accountability Partners</h3>
+                            <p>Connect with accountability partners who will support you in achieving your goals and staying on track with your personal development journey.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Expert Mentorship</h3>
+                            <p>Get guidance from experienced mentors and coaches who have walked the path before you and can help you avoid common pitfalls.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Shared Wisdom</h3>
+                            <p>Learn from the collective experiences of our community members through discussion forums, webinars, and collaborative learning sessions.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Form -->
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="text-center mb-2" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Fill out the form below to express your interest in joining our community. We'll get back to you within 24 hours with next steps.
+                </p>
+                
+                <div class="form-container">
+                    <div id="success-message" class="form-success"></div>
+                    
+                    <form id="community-form">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required minlength="2" placeholder="Enter your full name">
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Primary Area of Interest *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="clarity">Clarity & Purpose</option>
+                                <option value="mastery">Mastery & Productivity</option>
+                                <option value="community">Community & Networking</option>
+                                <option value="all">All Areas</option>
+                            </select>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Goals *</label>
+                            <textarea id="message" name="message" required minlength="20" placeholder="What are you hoping to achieve through personal development? What challenges are you currently facing?"></textarea>
+                            <span class="form-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter" style="margin-bottom: 0;">Subscribe to our newsletter for tips and updates</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">
+                            Submit Application
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section style="padding: 4rem 0; background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title">What Our Members Say</h2>
+                <div class="card-grid">
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <p style="font-style: italic; margin-bottom: 1rem;">
+                                "The Ascent Path community has been transformative for me. The accountability and support I receive from my peers has helped me achieve goals I never thought possible."
+                            </p>
+                            <p style="font-weight: 600; margin-bottom: 0;">- Sarah M., Entrepreneur</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <p style="font-style: italic; margin-bottom: 1rem;">
+                                "I joined skeptical, but within weeks I noticed significant improvements in my focus and productivity. The community aspect makes all the difference."
+                            </p>
+                            <p style="font-weight: 600; margin-bottom: 0;">- James T., Software Engineer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <p style="font-style: italic; margin-bottom: 1rem;">
+                                "Finding my purpose seemed impossible until I discovered The Ascent Path. The frameworks and community support helped me gain clarity and direction."
+                            </p>
+                            <p style="font-weight: 600; margin-bottom: 0;">- Maria L., Teacher</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h4>The Ascent Path</h4>
+                <p>Evolve from within.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> The Ascent Path. All Rights Reserved.</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
