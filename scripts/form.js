@@ -9,7 +9,8 @@ const products = [
 function initializeForm() {
     updateFooterDates();
     populateProductSelect(products);
-    // Review counter logic is omitted, as it belongs on the review.html page.
+    attachFormSubmitHandler();
+    // Review counter logic is intentionally handled on the review.html page.
 }
 
 /**
@@ -42,6 +43,28 @@ function updateFooterDates() {
 
     if (lastModifiedSpan) {
         lastModifiedSpan.textContent = document.lastModified;
+    }
+}
+
+/**
+ * Attach submit handlers to forms present on the page so we can mark
+ * the session as "just submitted" before the browser navigates to review.html.
+ * We set a sessionStorage flag that the review page will read and then clear.
+ */
+function attachFormSubmitHandler() {
+    try {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function () {
+                try {
+                    sessionStorage.setItem('submittedReview', 'true');
+                } catch (err) {
+                    // sessionStorage might be disabled, fail silently
+                }
+            }, true);
+        });
+    } catch (err) {
+        // If querySelectorAll fails (very unlikely), ignore.
     }
 }
 
