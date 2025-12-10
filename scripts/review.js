@@ -24,14 +24,10 @@
     }
   }
 
-  // Increment the persistent counter only when appropriate:
-  // - when we detect the user came from form.html (via document.referrer)
-  // - OR when the session submit flag was set (sessionStorage)
-  // We also set a sessionStorage flag so a refresh does not increment again.
+
   function incrementIfFromForm() {
     try {
       if (sessionStorage.getItem(SESSION_INCREMENTED) === 'true') {
-        // Already incremented this session/navigation; do nothing.
         return;
       }
 
