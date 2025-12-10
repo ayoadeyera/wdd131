@@ -109,7 +109,7 @@ const coursesData = [
         title: "Morning Mastery",
         category: "clarity",
         description: "Transform your mornings with intentional routines that set the tone for productive, focused days.",
-        image: "images/morning_mastery.webp",
+        image: "images/clarity_path.jpg",
         duration: "4 weeks",
         level: "Beginner"
     },
@@ -118,7 +118,7 @@ const coursesData = [
         title: "Deep Work Intensive",
         category: "mastery",
         description: "Master the art of focused work and eliminate distractions to achieve peak productivity.",
-        image: "images/deep_work.jpg",
+        image: "images/mastery_path.png",
         duration: "6 weeks",
         level: "Intermediate"
     },
@@ -127,7 +127,7 @@ const coursesData = [
         title: "Purpose Discovery",
         category: "clarity",
         description: "Uncover your life's purpose through guided reflection, values assessment, and vision crafting.",
-        image: "images/purpose_self.jpg",
+        image: "images/clarity_path.jpg",
         duration: "8 weeks",
         level: "Beginner"
     },
@@ -136,7 +136,7 @@ const coursesData = [
         title: "Accountability Partners",
         category: "community",
         description: "Connect with like-minded individuals for mutual support, accountability, and shared growth.",
-        image: "images/accountability.jpg",
+        image: "images/comm_path.webp",
         duration: "Ongoing",
         level: "All Levels"
     },
@@ -145,7 +145,7 @@ const coursesData = [
         title: "Peak Performance Protocol",
         category: "mastery",
         description: "Advanced techniques for sustaining high performance without burnout.",
-        image: "images/peak_perform.jpg",
+        image: "images/mastery_path.png",
         duration: "12 weeks",
         level: "Advanced"
     },
@@ -154,7 +154,7 @@ const coursesData = [
         title: "Mindful Leadership",
         category: "community",
         description: "Lead with clarity, compassion, and effectiveness through mindful practices.",
-        image: "images/leadership.jpg",
+        image: "images/comm_path.webp",
         duration: "10 weeks",
         level: "Intermediate"
     },
@@ -163,7 +163,7 @@ const coursesData = [
         title: "Goal Setting Framework",
         category: "clarity",
         description: "Learn a systematic approach to setting and achieving meaningful goals.",
-        image: "images/goal_setting.png",
+        image: "images/clarity_path.jpg",
         duration: "3 weeks",
         level: "Beginner"
     },
@@ -172,7 +172,7 @@ const coursesData = [
         title: "Time Mastery System",
         category: "mastery",
         description: "Revolutionary time management techniques used by top performers.",
-        image: "images/time_mastery.jpg",
+        image: "images/mastery_path.png",
         duration: "5 weeks",
         level: "Intermediate"
     },
@@ -181,7 +181,7 @@ const coursesData = [
         title: "Community Networking",
         category: "community",
         description: "Build meaningful professional relationships and expand your network authentically.",
-        image: "images/network.jpg",
+        image: "images/comm_path.webp",
         duration: "6 weeks",
         level: "All Levels"
     }
@@ -330,6 +330,15 @@ function validateEmail(email) {
 }
 
 /**
+ * Validate password strength
+ * @param {string} password - Password to validate
+ * @returns {boolean} True if valid
+ */
+function validatePassword(password) {
+    return password.length >= 6;
+}
+
+/**
  * Show error message for form field
  * @param {HTMLElement} formGroup - Form group element
  * @param {string} message - Error message
@@ -370,6 +379,12 @@ function validateField(input) {
     // Email validation
     if (input.type === 'email' && value && !validateEmail(value)) {
         showError(formGroup, 'Please enter a valid email address');
+        return false;
+    }
+    
+    // Password validation
+    if (input.type === 'password' && value && !validatePassword(value)) {
+        showError(formGroup, 'Password must be at least 6 characters');
         return false;
     }
     
@@ -459,6 +474,165 @@ function handleFormSubmission(form) {
     }, 5000);
 }
 
+// --- LOGIN FUNCTIONALITY ---
+
+/**
+ * Initialize login tabs
+ */
+function initLoginTabs() {
+    const tabs = document.querySelectorAll('.login-tab');
+    const contents = document.querySelectorAll('.tab-content');
+    
+    if (!tabs.length) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Show corresponding content
+            const targetId = tab.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+}
+
+/**
+ * Handle login form submission
+ */
+function initLoginForm() {
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = loginForm.querySelector('#login-email');
+            const password = loginForm.querySelector('#login-password');
+            
+            let isValid = true;
+            
+            if (!validateField(email)) isValid = false;
+            if (!validateField(password)) isValid = false;
+            
+            if (isValid) {
+                // Save login session
+                const userData = {
+                    email: email.value,
+                    loginTime: new Date().toISOString()
+                };
+                saveToStorage('userSession', userData);
+                
+                // Redirect to success page
+                window.location.href = 'success.html';
+            }
+        });
+        
+        // Real-time validation
+        const inputs = loginForm.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => validateField(input));
+            input.addEventListener('input', () => {
+                if (input.closest('.form-group').classList.contains('error')) {
+                    validateField(input);
+                }
+            });
+        });
+    }
+    
+    if (signupForm) {
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = signupForm.querySelector('#signup-name');
+            const email = signupForm.querySelector('#signup-email');
+            const password = signupForm.querySelector('#signup-password');
+            
+            let isValid = true;
+            
+            if (!validateField(name)) isValid = false;
+            if (!validateField(email)) isValid = false;
+            if (!validateField(password)) isValid = false;
+            
+            if (isValid) {
+                // Save user data
+                const userData = {
+                    name: name.value,
+                    email: email.value,
+                    signupTime: new Date().toISOString()
+                };
+                saveToStorage('userSession', userData);
+                
+                // Redirect to success page
+                window.location.href = 'success.html';
+            }
+        });
+        
+        // Real-time validation
+        const inputs = signupForm.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => validateField(input));
+            input.addEventListener('input', () => {
+                if (input.closest('.form-group').classList.contains('error')) {
+                    validateField(input);
+                }
+            });
+        });
+    }
+}
+
+// --- REVIEW COUNTER ---
+
+/**
+ * Get review counter from localStorage
+ * @returns {number} Current review count
+ */
+function getReviewCount() {
+    return getFromStorage('reviewCount') || 0;
+}
+
+/**
+ * Increment review counter
+ */
+function incrementReviewCount() {
+    const currentCount = getReviewCount();
+    const newCount = currentCount + 1;
+    saveToStorage('reviewCount', newCount);
+    return newCount;
+}
+
+/**
+ * Display review counter on success page
+ */
+function displayReviewCount() {
+    const counterElement = document.getElementById('review-count');
+    if (counterElement) {
+        const count = incrementReviewCount();
+        counterElement.textContent = count;
+    }
+}
+
+/**
+ * Display user info on success page
+ */
+function displayUserInfo() {
+    const userSession = getFromStorage('userSession');
+    const userNameElement = document.getElementById('user-name');
+    
+    if (userSession && userNameElement) {
+        const name = userSession.name || userSession.email.split('@')[0];
+        userNameElement.textContent = name;
+    }
+}
+
 // --- INITIALIZATION ---
 
 /**
@@ -471,4 +645,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initHamburgerMenu();
     initCourseFilters();
     initFormValidation();
+    initLoginTabs();
+    initLoginForm();
+    
+    // Success page specific
+    if (window.location.pathname.includes('success.html')) {
+        displayUserInfo();
+        displayReviewCount();
+    }
 });
