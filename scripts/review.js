@@ -10,19 +10,13 @@
       const ref = new URL(document.referrer);
       return ref.pathname.endsWith('/form.html') || ref.pathname.endsWith('form.html');
     } catch (e) {
-      // Fallback: simple substring check
       return document.referrer.indexOf('form.html') !== -1;
     }
   }
 
-  // Increment the persistent counter only when appropriate:
-  // - when we detect the user came from form.html (via document.referrer)
-  // - OR when the session submit flag was set (sessionStorage)
-  // We also set a sessionStorage flag so a refresh does not increment again.
   function incrementIfFromForm() {
     try {
       if (sessionStorage.getItem(SESSION_INCREMENTED) === 'true') {
-        // Already incremented this session/navigation; do nothing.
         return;
       }
 
@@ -32,13 +26,10 @@
       if (cameFromForm || wasSubmitted) {
         const current = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
         localStorage.setItem(STORAGE_KEY, String(current + 1));
-        // Mark incremented for this session so refresh doesn't increase again
         sessionStorage.setItem(SESSION_INCREMENTED, 'true');
-        // Clear the submit flag if present
         sessionStorage.removeItem(SESSION_SUBMIT_FLAG);
       }
     } catch (err) {
-      // Storage may be disabled; fail silently
       console.warn('Could not update review count in storage:', err);
     }
   }

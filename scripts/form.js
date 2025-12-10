@@ -44,9 +44,6 @@ function updateFooterDates() {
     }
 }
 
-/**
- * Attach submit handlers to forms
- */
 function attachFormSubmitHandler() {
     try {
         const forms = document.querySelectorAll('form');
@@ -55,10 +52,12 @@ function attachFormSubmitHandler() {
                 try {
                     sessionStorage.setItem('submittedReview', 'true');
                 } catch (err) {
+                    
                 }
             }, true);
         });
     } catch (err) {
+        
     }
 }
 
