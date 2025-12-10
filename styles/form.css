@@ -1,18 +1,20 @@
 :root {
-    --primary-bg: #025E73;
-    --secondary-bg: #F2F2F2;
-    --card-bg: #FFFFFF;
-    --accent-color: #07D9D9;
-    --secondary-accent: #BF622C;
-    --text-dark: #023859;
-    --text-light: #F7FAFC;
-    --border-color: #E2E8F0;
+    /* Colors Pallete */
+    --primary-bg: #013942;        /* darker teal for header/buttons */
+    --secondary-bg: #F5F7F8;      /* very light background */
+    --card-bg: #FFFFFF;           /* white card */
+    --accent-color: #00666A;      /* darker cyan/teal for accents & links */
+    --secondary-accent: #8A3F1A;  /* darker warm accent for stars/icons */
+    --text-dark: #06292E;         /* very dark teal/near-black for body text */
+    --text-light: #FFFFFF;        /* use pure white on dark backgrounds */
+    --border-color: #DCE6E8;      /* soft border */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-    --error-color: red;
-    --valid-color: green;
+    --error-color: #B00020;
+    --valid-color: #006400;
 }
 
+/* Layout & base text */
 body {
     display: flex;
     flex-direction: column;
@@ -24,9 +26,10 @@ body {
     background: var(--secondary-bg);
     font-family: var(--font-body);
     font-weight: 400;
-    color: var(--text-dark); /* Set a default text color */
+    color: var(--text-dark);
 }
 
+/* Header */
 header {
     width: 100%;
     background-color: var(--primary-bg);
@@ -47,6 +50,7 @@ header h1 {
     font-weight: 700;
 }
 
+/* Main / form layout */
 main {
     margin: 0;
     padding: 0;
@@ -73,7 +77,7 @@ main {
     padding: 1.2rem 1.2rem 1.5rem 1.2rem;
     background: var(--card-bg);
     box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .wf2 legend {
@@ -88,7 +92,7 @@ main {
     text-align: left;
     width: auto;
     display: block;
-    background: var(--secondary-bg); /* Lighter background for the legend */
+    background: var(--secondary-bg);
     box-sizing: border-box;
     font-family: var(--font-heading);
 }
@@ -122,9 +126,10 @@ main {
 .wf2 input[type="text"]:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(7, 217, 217, 0.5); /* Accent color glow */
+    box-shadow: 0 0 0 3px rgba(0, 102, 106, 0.15); /* visible focus ring */
 }
 
+/* Rating layout */
 .rating {
     display: flex;
     flex-direction: row;
@@ -143,15 +148,15 @@ main {
 }
 
 .star-option label {
-    font-size: 1.5em; /* Slightly larger stars */
-    color: var(--secondary-accent); /* Use secondary accent for stars */
+    font-size: 1.5em;
+    color: var(--secondary-accent);
     margin-bottom: 0.2em;
     cursor: pointer;
     transition: color 0.2s;
 }
 
 .star-option label:hover {
-    color: var(--secondary-accent); /* Maintain color on hover */
+    color: var(--secondary-accent);
 }
 
 .star-option input[type="radio"] {
@@ -186,7 +191,7 @@ main {
     width: 1.2em;
     height: 1.2em;
     transform: scale(1.2);
-    accent-color: var(--primary-bg); /* Use primary color for checkboxes */
+    accent-color: var(--primary-bg); 
     margin-right: 0.5em;
 }
 
@@ -235,6 +240,7 @@ textarea {
     margin-bottom: 1em;
 }
 
+/* Buttons */
 .wf2 button,
 .wf2 input[type="submit"] {
     width: 100%;
@@ -251,11 +257,12 @@ textarea {
     font-family: var(--font-heading);
 }
 
+/* Hover state */
 .wf2 button:hover,
 .wf2 input[type="submit"]:hover {
-    background: var(--accent-color);
-    color: var(--text-dark);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #025f66; 
+    color: var(--text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Validation Styles */
@@ -275,18 +282,14 @@ textarea {
     border-bottom: solid 3px var(--valid-color);
 }
 
-
-/* Radio button validation (more visible feedback) */
+/* Radio button validation */
 .rating input[type="radio"]:required:invalid ~ label {
     color: var(--error-color);
-    /* Color the stars red if none selected */
 }
 
 .rating input[type="radio"]:checked ~ label {
     color: var(--secondary-accent);
-    /* Keep selected stars the accent color */
 }
-
 
 /*----------- END FORM STYLING--------------*/
 
@@ -363,9 +366,3 @@ footer p {
         font-size: 3rem;
     }
 }
-
-
-/* footer {
-    padding: 1rem 0.2rem 0.5rem 0.2rem;
-    
-} */

@@ -1,16 +1,15 @@
 :root {
-    --primary-bg: #025E73;
-    --secondary-bg: #F2F2F2;
+    /* Palette colors */
+    --primary-bg: #013942;
+    --secondary-bg: #F5F7F8;
     --card-bg: #FFFFFF;
-    --accent-color: #07D9D9;
-    --secondary-accent: #BF622C;
-    --text-dark: #023859;
-    --text-light: #F7FAFC;
-    --border-color: #E2E8F0;
+    --accent-color: #00666A;      
+    --secondary-accent: #8A3F1A;  
+    --text-dark: #06292E;
+    --text-light: #FFFFFF;
+    --border-color: #DCE6E8;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-    --error-color: red;
-    --valid-color: green;
 }
 
 body {
@@ -32,12 +31,14 @@ h1 {
     font-family: var(--font-heading);
 }
 
+/* Paragraph text
 p {
     color: var(--text-dark);
     font-size: 1.2em;
     margin-bottom: 2em;
 }
 
+/* Buttons / links */
 a {
     display: inline-block;
     padding: 0.7em 1.5em;
@@ -49,6 +50,7 @@ a {
     transition: background 0.2s;
 }
 
+/* Hover state */
 a:hover {
-    background-color: var(--secondary-accent);
+    background-color: #005456; 
 }
