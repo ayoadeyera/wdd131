@@ -109,7 +109,7 @@ const coursesData = [
         title: "Morning Mastery",
         category: "clarity",
         description: "Transform your mornings with intentional routines that set the tone for productive, focused days.",
-        image: "images/clarity_path.jpg",
+        image: "images/morning_mastery.webp",
         duration: "4 weeks",
         level: "Beginner"
     },
@@ -118,7 +118,7 @@ const coursesData = [
         title: "Deep Work Intensive",
         category: "mastery",
         description: "Master the art of focused work and eliminate distractions to achieve peak productivity.",
-        image: "images/mastery_path.png",
+        image: "images/deep_work.jpg",
         duration: "6 weeks",
         level: "Intermediate"
     },
@@ -127,7 +127,7 @@ const coursesData = [
         title: "Purpose Discovery",
         category: "clarity",
         description: "Uncover your life's purpose through guided reflection, values assessment, and vision crafting.",
-        image: "images/clarity_path.jpg",
+        image: "images/purpose_self.jpg",
         duration: "8 weeks",
         level: "Beginner"
     },
@@ -136,7 +136,7 @@ const coursesData = [
         title: "Accountability Partners",
         category: "community",
         description: "Connect with like-minded individuals for mutual support, accountability, and shared growth.",
-        image: "images/comm_path.webp",
+        image: "images/accountability.jpg",
         duration: "Ongoing",
         level: "All Levels"
     },
@@ -145,7 +145,7 @@ const coursesData = [
         title: "Peak Performance Protocol",
         category: "mastery",
         description: "Advanced techniques for sustaining high performance without burnout.",
-        image: "images/mastery_path.png",
+        image: "images/peak_perform.jpg",
         duration: "12 weeks",
         level: "Advanced"
     },
@@ -154,7 +154,7 @@ const coursesData = [
         title: "Mindful Leadership",
         category: "community",
         description: "Lead with clarity, compassion, and effectiveness through mindful practices.",
-        image: "images/comm_path.webp",
+        image: "images/leadership.jpg",
         duration: "10 weeks",
         level: "Intermediate"
     },
@@ -163,7 +163,7 @@ const coursesData = [
         title: "Goal Setting Framework",
         category: "clarity",
         description: "Learn a systematic approach to setting and achieving meaningful goals.",
-        image: "images/clarity_path.jpg",
+        image: "images/goal_setting.png",
         duration: "3 weeks",
         level: "Beginner"
     },
@@ -172,7 +172,7 @@ const coursesData = [
         title: "Time Mastery System",
         category: "mastery",
         description: "Revolutionary time management techniques used by top performers.",
-        image: "images/mastery_path.png",
+        image: "images/time_mastery.jpg",
         duration: "5 weeks",
         level: "Intermediate"
     },
@@ -181,7 +181,7 @@ const coursesData = [
         title: "Community Networking",
         category: "community",
         description: "Build meaningful professional relationships and expand your network authentically.",
-        image: "images/comm_path.webp",
+        image: "images/network.jpg",
         duration: "6 weeks",
         level: "All Levels"
     }
