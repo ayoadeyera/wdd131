@@ -10,7 +10,6 @@ function initializeForm() {
     updateFooterDates();
     populateProductSelect(products);
     attachFormSubmitHandler();
-    // Review counter logic is intentionally handled on the review.html page.
 }
 
 /**
@@ -23,7 +22,6 @@ function populateProductSelect(productData) {
 
     productData.forEach(product => {
         const option = document.createElement('option');
-        // Set value to product ID and text content to product name
         option.value = product.id;
         option.textContent = product.name;
         productSelect.appendChild(option);
@@ -47,9 +45,7 @@ function updateFooterDates() {
 }
 
 /**
- * Attach submit handlers to forms present on the page so we can mark
- * the session as "just submitted" before the browser navigates to review.html.
- * We set a sessionStorage flag that the review page will read and then clear.
+ * Attach submit handlers to forms
  */
 function attachFormSubmitHandler() {
     try {
@@ -59,12 +55,10 @@ function attachFormSubmitHandler() {
                 try {
                     sessionStorage.setItem('submittedReview', 'true');
                 } catch (err) {
-                    // sessionStorage might be disabled, fail silently
                 }
             }, true);
         });
     } catch (err) {
-        // If querySelectorAll fails (very unlikely), ignore.
     }
 }
 
