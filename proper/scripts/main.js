@@ -100,90 +100,114 @@ function initHamburgerMenu() {
 
 // --- COURSE DATA & MANAGEMENT ---
 
-/**
- * Course database
- */
 const coursesData = [
     {
         id: 1,
         title: "Morning Mastery",
+        slug: "morning-mastery",
         category: "clarity",
         description: "Transform your mornings with intentional routines that set the tone for productive, focused days.",
-        image: "images/clarity_path.jpg",
+        image: "images/course-morning-mastery.jpg",
         duration: "4 weeks",
-        level: "Beginner"
+        level: "Beginner",
+        price: "$97",
+        instructor: "Dr. Sarah Johnson"
     },
     {
         id: 2,
         title: "Deep Work Intensive",
+        slug: "deep-work-intensive",
         category: "mastery",
         description: "Master the art of focused work and eliminate distractions to achieve peak productivity.",
-        image: "images/mastery_path.png",
+        image: "images/course-deep-work.jpg",
         duration: "6 weeks",
-        level: "Intermediate"
+        level: "Intermediate",
+        price: "$147",
+        instructor: "Michael Chen"
     },
     {
         id: 3,
         title: "Purpose Discovery",
+        slug: "purpose-discovery",
         category: "clarity",
         description: "Uncover your life's purpose through guided reflection, values assessment, and vision crafting.",
-        image: "images/clarity_path.jpg",
+        image: "images/course-purpose.jpg",
         duration: "8 weeks",
-        level: "Beginner"
+        level: "Beginner",
+        price: "$197",
+        instructor: "Dr. Sarah Johnson"
     },
     {
         id: 4,
         title: "Accountability Partners",
+        slug: "accountability-partners",
         category: "community",
         description: "Connect with like-minded individuals for mutual support, accountability, and shared growth.",
-        image: "images/comm_path.webp",
+        image: "images/course-accountability.jpg",
         duration: "Ongoing",
-        level: "All Levels"
+        level: "All Levels",
+        price: "$47/month",
+        instructor: "Elena Patel"
     },
     {
         id: 5,
         title: "Peak Performance Protocol",
+        slug: "peak-performance",
         category: "mastery",
         description: "Advanced techniques for sustaining high performance without burnout.",
-        image: "images/mastery_path.png",
+        image: "images/course-performance.jpg",
         duration: "12 weeks",
-        level: "Advanced"
+        level: "Advanced",
+        price: "$297",
+        instructor: "Michael Chen"
     },
     {
         id: 6,
         title: "Mindful Leadership",
+        slug: "mindful-leadership",
         category: "community",
         description: "Lead with clarity, compassion, and effectiveness through mindful practices.",
-        image: "images/comm_path.webp",
+        image: "images/course-leadership.jpg",
         duration: "10 weeks",
-        level: "Intermediate"
+        level: "Intermediate",
+        price: "$247",
+        instructor: "Elena Patel"
     },
     {
         id: 7,
         title: "Goal Setting Framework",
+        slug: "goal-setting",
         category: "clarity",
         description: "Learn a systematic approach to setting and achieving meaningful goals.",
-        image: "images/clarity_path.jpg",
+        image: "images/course-goals.jpg",
         duration: "3 weeks",
-        level: "Beginner"
+        level: "Beginner",
+        price: "$77",
+        instructor: "Dr. Sarah Johnson"
     },
     {
         id: 8,
         title: "Time Mastery System",
+        slug: "time-mastery",
         category: "mastery",
         description: "Revolutionary time management techniques used by top performers.",
-        image: "images/mastery_path.png",
+        image: "images/course-time.jpg",
         duration: "5 weeks",
-        level: "Intermediate"
+        level: "Intermediate",
+        price: "$127",
+        instructor: "Michael Chen"
     },
     {
         id: 9,
         title: "Community Networking",
+        slug: "community-networking",
         category: "community",
         description: "Build meaningful professional relationships and expand your network authentically.",
-        image: "images/comm_path.webp",
+        image: "images/course-networking.jpg",
         duration: "6 weeks",
-        level: "All Levels"
+        level: "All Levels",
+        price: "$97",
+        instructor: "Elena Patel"
     }
 ];
 
@@ -224,11 +248,6 @@ function filterCourses(category) {
     return coursesData.filter(course => course.category === category);
 }
 
-/**
- * Create HTML for a single course card
- * @param {Object} course - Course object
- * @returns {string} HTML string for course card
- */
 function createCourseCard(course) {
     const favorites = getFavorites();
     const isFavorite = favorites.includes(course.id);
@@ -251,7 +270,7 @@ function createCourseCard(course) {
                     <span style="font-size: 0.9rem; color: #666;">
                         ${course.duration} • ${course.level}
                     </span>
-                    <a href="#" class="cta-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    <a href="course-${course.slug}.html" class="cta-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
                         Enroll Now
                     </a>
                 </div>
@@ -609,9 +628,6 @@ function incrementReviewCount() {
     return newCount;
 }
 
-/**
- * Display review counter on success page
- */
 function displayReviewCount() {
     const counterElement = document.getElementById('review-count');
     if (counterElement) {
@@ -620,9 +636,6 @@ function displayReviewCount() {
     }
 }
 
-/**
- * Display user info on success page
- */
 function displayUserInfo() {
     const userSession = getFromStorage('userSession');
     const userNameElement = document.getElementById('user-name');
@@ -633,11 +646,35 @@ function displayUserInfo() {
     }
 }
 
-// --- INITIALIZATION ---
+function loadCourseDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseSlug = urlParams.get('course');
+    
+    if (!courseSlug) return;
+    
+    const course = coursesData.find(c => c.slug === courseSlug);
+    if (!course) return;
+    
+    const titleElement = document.getElementById('course-title');
+    const imageElement = document.getElementById('course-image');
+    const descElement = document.getElementById('course-description');
+    const durationElement = document.getElementById('course-duration');
+    const levelElement = document.getElementById('course-level');
+    const priceElement = document.getElementById('course-price');
+    const instructorElement = document.getElementById('course-instructor');
+    
+    if (titleElement) titleElement.textContent = course.title;
+    if (imageElement) {
+        imageElement.src = course.image;
+        imageElement.alt = course.title;
+    }
+    if (descElement) descElement.textContent = course.description;
+    if (durationElement) durationElement.textContent = course.duration;
+    if (levelElement) levelElement.textContent = course.level;
+    if (priceElement) priceElement.textContent = course.price;
+    if (instructorElement) instructorElement.textContent = course.instructor;
+}
 
-/**
- * Initialize all functions when DOM is loaded
- */
 document.addEventListener('DOMContentLoaded', () => {
     setCurrentYear();
     setLastModified();
@@ -648,9 +685,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoginTabs();
     initLoginForm();
     
-    // Success page specific
     if (window.location.pathname.includes('success.html')) {
         displayUserInfo();
         displayReviewCount();
+    }
+    
+    if (window.location.pathname.includes('course-')) {
+        loadCourseDetails();
     }
 });
