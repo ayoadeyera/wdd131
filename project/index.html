@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Ascent Path - Unlock your potential through curated courses, expert programs, and a supportive community focused on personal growth.">
     <title>The Ascent Path - Unlock Your Potential</title>
     
     <!-- Google Fonts -->
@@ -14,26 +14,26 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/home.css">
     
-    <!-- JavaScript (with defer for performance) -->
+    <!-- JavaScript -->
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <a href="#" class="logo-container">
-                <!-- IMPORTANT: Replace the src with the path to your PNG file -->
+            <a href="index.html" class="logo-container">
                 <img src="images/logo.jpg" alt="The Ascent Path Logo" class="logo-img">
                 <span class="logo-text">The Ascent Path</span>
             </a>    
             <nav id="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-            <a href="#" class="cta-button login-btn">Login</a>
+            <a href="login.html" class="cta-button login-btn">Login</a>
             <button id="hamburger-menu" aria-label="Open Navigation Menu">
                 <span></span>
                 <span></span>
@@ -45,72 +45,50 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            
-            <!-- IMAGE ELEMENT: Placed inside the section -->
-            <!-- IMPORTANT: Replace the src with the path to your .webp or .png file -->
-            <img src="images/homeherolarge-1.webp" alt="A background image representing personal growth and ascent" class="hero-bg-img">
-
+            <img src="images/homeherolarge-1.webp" alt="A background image representing personal growth and ascent" class="hero-bg-img" loading="lazy">
             <div class="container">
                 <div class="hero-text">
-                    <!-- Added fade-in-up class for visual effect -->
-                    <h1 class="fade-in-up">Unlock Your Potential, Master Your Path.</h1>
-                    <p class="fade-in-up">The Ascent Path provides curated courses and a supportive community to help you achieve clarity, productivity, and personal mastery.</p>
-                    <!-- Added fade-in-up class for visual effect -->
-                    <a href="#" class="cta-button fade-in-up">Start Your Journey Today</a>
+                    <h1>Unlock Your Potential, Master Your Path.</h1>
+                    <p>The Ascent Path provides curated courses and a supportive community to help you achieve clarity, productivity, and personal mastery.</p>
+                    <a href="courses.html" class="cta-button">Start Your Journey Today</a>
                 </div>
             </div>
         </section>
-        <!-- Categories Section -->
-        
-        <!-- 2. CORE CATEGORIES SECTION -->
+
+        <!-- Core Categories Section -->
         <section id="core-categories">
             <div class="container">
-                <h2>Our Core Learning Paths</h2>
-                <div class="category-grid">
+                <h2 class="section-title">Our Core Learning Paths</h2>
+                <div class="card-grid three-col">
                     
-                    <!-- CATEGORY CARD 1: Clarity -->
-                    <div class="category-card">
-                        <!-- 1. Heading -->
-                        <h3>The Clarity Path</h3>
-                        
-                        <!-- 2. Image (with lazy loading) -->
-                        <img src="images/clarity_path.jpg" alt="Illustration of a clear mind or focused light" class="category-img" loading="lazy">
-                        
-                        <!-- 3. Description -->
-                        <p>Identify your true North. This path provides powerful frameworks and journaling exercises to eliminate mental clutter and define your life's purpose and goals.</p>
-                        
-                        <!-- 4. Button -->
-                        <a href="#" class="cta-button">Explore Courses</a>
+                    <!-- Clarity Path -->
+                    <div class="card">
+                        <img src="images/clarity_path.jpg" alt="Illustration of a clear mind or focused light" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Clarity Path</h3>
+                            <p>Identify your true North. This path provides powerful frameworks and journaling exercises to eliminate mental clutter and define your life's purpose and goals.</p>
+                            <a href="courses.html" class="cta-button">Explore Courses</a>
+                        </div>
                     </div>
                     
-                    <!-- CATEGORY CARD 2: Mastery -->
-                    <div class="category-card">
-                        <!-- 1. Heading -->
-                        <h3>The Mastery Path</h3>
-                        
-                        <!-- 2. Image (with lazy loading) -->
-                        <img src="images/mastery_path.png" alt="Illustration of a challenging mountain climb" class="category-img" loading="lazy">
-                        
-                        <!-- 3. Description -->
-                        <p>Master deep work, focus, and peak performance. Learn advanced techniques for sustained productivity and skill acquisition without falling victim to burnout.</p>
-                        
-                        <!-- 4. Button -->
-                        <a href="#" class="cta-button">Explore Courses</a>
+                    <!-- Mastery Path -->
+                    <div class="card">
+                        <img src="images/mastery_path.png" alt="Illustration of a challenging mountain climb" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Mastery Path</h3>
+                            <p>Master deep work, focus, and peak performance. Learn advanced techniques for sustained productivity and skill acquisition without falling victim to burnout.</p>
+                            <a href="courses.html" class="cta-button">Explore Courses</a>
+                        </div>
                     </div>
                     
-                    <!-- CATEGORY CARD 3: Community -->
-                    <div class="category-card">
-                        <!-- 1. Heading -->
-                        <h3>The Community Path</h3>
-                        
-                        <!-- 2. Image (with lazy loading) -->
-                        <img src="images/comm_path.webp" alt="Illustration of connected nodes or people networking" class="category-img" loading="lazy">
-                        
-                        <!-- 3. Description -->
-                        <p>Unlock the power of shared growth. Connect with a global network of ambitious learners for accountability, mentorship, and collective wisdom.</p>
-                        
-                        <!-- 4. Button -->
-                        <a href="#" class="cta-button">Join Community</a>
+                    <!-- Community Path -->
+                    <div class="card">
+                        <img src="images/comm_path.webp" alt="Illustration of connected nodes or people networking" loading="lazy">
+                        <div class="card-content">
+                            <h3>The Community Path</h3>
+                            <p>Unlock the power of shared growth. Connect with a global network of ambitious learners for accountability, mentorship, and collective wisdom.</p>
+                            <a href="community.html" class="cta-button">Join Community</a>
+                        </div>
                     </div>
 
                 </div>
@@ -121,12 +99,13 @@
         <section id="featured">
             <div class="container">
                 <div class="featured-image">
-                    <img src="images/productivity.jpg" alt="A picture representing a featured program." loading="lazy">
+                    <img src="images/productivity.jpg" alt="A picture representing a featured program" loading="lazy">
                 </div>
                 <div class="featured-content">
                     <h2>Featured: The Productivity Masterclass</h2>
                     <p>Transform your approach to work and life. Learn the systems and mindsets used by top performers to achieve extraordinary results without burnout.</p>
-                    <a href="#" class="cta-button">Learn More</a>
+                    <p>This comprehensive 8-week program combines proven time management techniques, deep work strategies, and sustainable productivity habits.</p>
+                    <a href="courses.html" class="cta-button">Learn More</a>
                 </div>
             </div>
         </section>
@@ -135,13 +114,13 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <a href="#">The Ascent Path</a>
-                <p>&copy; 2024 The Ascent Path. All Rights Reserved.</p>
+                <h4>The Ascent Path</h4>
+                <p>Evolve from within.</p>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Press</a></li>
                 </ul>
@@ -149,18 +128,23 @@
             <div class="footer-links">
                 <h4>Explore</h4>
                 <ul>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Community</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
                     <li><a href="#">Events</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
+            <div class="footer-links">
                 <h4>Follow Us</h4>
-                <!-- In a real project, replace # with actual links -->
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> The Ascent Path. All Rights Reserved.</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
 
